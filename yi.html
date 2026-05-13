@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detectives Only - Submit Your Ideas</title>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle, #1a0000 0%, #050000 100%);
+            color: #d1d1d1;
+            text-align: center;
+            min-height: 100vh;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: rgba(0, 0, 0, 0.95);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 2px solid #4a0000;
+        }
+
+        nav a {
+            color: #888;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav a:hover, nav a.active {
+            color: #ff0000;
+            text-shadow: 0 0 8px #ff0000;
+        }
+
+        /* Container */
+        .container {
+            padding: 120px 10px 50px;
+            max-width: 900px;
+            margin: auto;
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #ff0000;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+        }
+
+        .sub-text {
+            color: #888;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        /* Google Form Styling */
+        .form-wrapper {
+            background: rgba(0, 0, 0, 0.6);
+            border: 2px solid #4a0000;
+            border-radius: 8px;
+            box-shadow: 0 0 30px rgba(74, 0, 0, 0.5);
+            overflow: hidden;
+            position: relative;
+            padding: 10px;
+        }
+
+        /* Vignette Effect */
+        .vignette {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle, transparent 50%, black 150%);
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        iframe {
+            max-width: 100%;
+            background: white; /* Form එක ඇතුළ පේන්න සුදු පාට තැබීම වඩාත් හොඳයි */
+            border-radius: 4px;
+        }
+
+        @media (max-width: 600px) {
+            h2 { font-size: 1.8rem; }
+            .container { padding-top: 150px; }
+            iframe { height: 600px; } /* Mobile වලදී උස අඩු කිරීම */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="vignette"></div>
+
+    <nav>
+        <div style="display: flex;">
+            <a href="index.html">Home</a>
+            <a href="cases.html">Cases</a>
+            <a href="yi.html" class="active">Your Ideas</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Submit Evidence</h2>
+        <p class="sub-text">ඔබේ අදහස් හෝ අලුත් අපරාධ වාර්තා රහසිගතව අප වෙත එවන්න.</p>
+
+        <div class="form-wrapper">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdUrG1rkRN34cnmvACxFt_zF0A0pkzJ6PJM9rAOC5NMhoILMg/viewform?embedded=true" 
+            width="100%" 
+            height="807" 
+            frameborder="0" 
+            marginheight="0" 
+            marginwidth="0">Loading…</iframe>
+        </div>
+    </div>
+
+</body>
+</html>
