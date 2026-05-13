@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case 06 - මහනුවර හෝටලයේ කාමර අංක 305 අභිරහස</title>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle, #1a0000 0%, #050000 100%);
+            color: #d1d1d1;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            border-bottom: 2px solid #4a0000;
+            position: fixed;
+            top: 0; width: 100%; z-index: 1000;
+        }
+
+        nav a {
+            color: #888;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        nav a:hover { color: #ff0000; text-shadow: 0 0 5px #ff0000; }
+
+        /* Container */
+        .container {
+            max-width: 800px;
+            margin: 120px auto 50px;
+            padding: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .case-header {
+            text-align: center;
+            border-bottom: 3px double #4a0000;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .case-header h1 {
+            color: #ff0000;
+            font-size: 2.2rem;
+            margin: 0;
+            letter-spacing: 3px;
+        }
+
+        .status-tag {
+            color: #ff0000;
+            border: 1px solid #ff0000;
+            padding: 2px 10px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        /* Evidence Sections */
+        .section {
+            background: rgba(20, 0, 0, 0.6);
+            border-left: 4px solid #4a0000;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+
+        .section h3 {
+            color: #ff0000;
+            margin-top: 0;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            border-bottom: 1px solid #330000;
+            padding-bottom: 5px;
+        }
+
+        ul { list-style: square; padding-left: 20px; }
+        li { margin-bottom: 10px; }
+
+        .suspect-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .suspect {
+            border: 1px solid #330000;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .suspect span { color: #ff0000; font-weight: bold; }
+
+        /* Question & Reveal Styles */
+        .question-box {
+            background: #4a0000;
+            color: #fff;
+            padding: 25px;
+            text-align: center;
+            border-radius: 5px;
+            margin-top: 40px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: transparent;
+            color: #ff0000;
+            padding: 10px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid #ff0000;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: 0.4s;
+            margin-top: 30px;
+        }
+
+        .cta-button:hover {
+            background-color: #ff0000;
+            color: #000;
+            box-shadow: 0 0 20px #ff0000;
+        }
+
+        .feedback-btn {
+            background: transparent;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: inherit;
+            transition: 0.3s;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .feedback-btn:hover { background: rgba(255, 255, 255, 0.1); transform: scale(1.05); }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 30px;
+            color: #888;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .back-btn:hover { color: #fff; }
+
+        @media (max-width: 600px) {
+            .suspect-box { grid-template-columns: 1fr; }
+            .case-header h1 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div style="display: flex;">
+            <a href="index.html" target="content-frame">Home</a>
+            <a href="cases.html" target="content-frame">Cases</a>
+            <a href="yi.html" target="content-frame">Your Ideas</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="case-header">
+            <span class="status-tag">CASE FILE #006</span>
+            <h1>මහනුවර හෝටලයේ 305 අභිරහස</h1>
+            <p>ස්ථානය: මහනුවර ප්‍රසිද්ධ හෝටලයක් | වේලාව: උදේ 09:00</p>
+        </div>
+
+        <div class="section">
+            <h3>සිදුවීම (The Incident)</h3>
+            <p>හෝටල් කාමර අංක 305 තුළ <strong>"ප්‍රදීප්"</strong> නම් පුද්ගලයා විෂ පානය කර මියගොස් සිටියදී හමුවිය. කාමරය ඇතුළතින් අගුළු දමා තිබූ අතර, එය 12 වන මහලේ පිහිටා ඇති බැවින් ජනේලයෙන් පිටතින් අයෙකුට ඇතුළු විය නොහැක.</p>
+        </div>
+
+        <div class="section">
+            <h3>සාක්ෂි (Evidence)</h3>
+            <ul>
+                <li><strong>මරණ වේලාව:</strong> පෙරදා රාත්‍රී 9:30 සිට අද උදේ 8:30 දක්වා අතර කාලය.</li>
+                <li><strong>විෂ:</strong> මේසය මත තිබූ වතුර වීදුරුවක විෂ මිශ්‍ර කර තිබුණි.</li>
+                <li><strong>CCTV:</strong> රාත්‍රී 9:30 ට පසු කිසිවෙකු කාමරයට ඇතුළු වී නැත. උදේ 8:30 ට බිරිඳ පැමිණෙන තෙක් වෙනත් චලනයක් වාර්තා නොවේ.</li>
+                <li><strong>විශේෂ Clue:</strong> බිරිඳ සතුව තිබූ කඩදාසියක <strong>"Sorry, 12 hours is enough"</strong> ලෙස ලියා තිබුණි.</li>
+                <li><strong>අගුළු දැමීම:</strong> දොර ඇතුළතින් පමණක් ලොක් කළ හැකි වර්ගයේ එකකි.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>සැකකරුවන් (Suspects)</h3>
+            <div class="suspect-box">
+                <div class="suspect">
+                    <span>1. රුවන් (මිත්‍රයා):</span> පෙරදා රාත්‍රී 9:00 ට පැමිණ 9:30 ට පිටව ගොස් ඇත.
+                </div>
+                <div class="suspect">
+                    <span>2. සහන් (කළමනාකරු):</span> උදේ 8:00 ට Room Service සඳහා පැමිණ 8:05 ට ගිය බව පවසයි.
+                </div>
+                <div class="suspect">
+                    <span>3. නදීෂා (බිරිඳ):</span> උදේ 8:30 ට පැමිණ දොර ඇරගෙන ඇතුළට ගිය පළමු පුද්ගලයාය.
+                </div>
+            </div>
+        </div>
+
+        <div class="question-box">
+            <p>කාමරය ඇතුළතින් ලොක් කර තිබියදී මිනීමරුවා කළ උපක්‍රමය කුමක්ද? මිනීමරුවා කවුද?</p>
+        </div>
+
+        <center>
+            <button class="cta-button" onclick="revealSolution()" id="revealBtn">Reveal Investigation Analysis</button>
+        </center>
+
+        <div id="solutionSection" style="display: none; margin-top: 50px; animation: fadeIn 1.5s ease-in;">
+            <div class="section" style="border-color: #00ff00; background: rgba(0, 20, 0, 0.4);">
+                <h3 style="color: #00ff00;">විමර්ශන වාර්තාව (Analysis Result)</h3>
+                <p><strong>මිනීමරුවා:</strong> රුවන් (මිත්‍රයා)</p>
+                <p><strong>විමර්ශන නිරීක්ෂණ:</strong></p>
+                <ul>
+                    <li><strong>Locked Room උපක්‍රමය:</strong> ප්‍රදීප් විසින්ම දොර ඇතුළතින් ලොක් කර ඇත. රුවන් රාත්‍රී 9:00 ට පැමිණි විට වතුර වීදුරුවට විෂ මිශ්‍ර කර ඇති අතර, එය වහාම ක්‍රියාත්මක වන විෂක් නොවේ (Delayed Action Poison).</li>
+                    <li><strong>"12 Hours" අභිරහස:</strong> රුවන් විෂ මිශ්‍ර කළේ රාත්‍රී 9:00 ටය. එය හරියටම පැය 12 කට පසු (උදේ 9:00 ට) මරණය සිදුවන ලෙස සකස් කළ 'Slow Poison' වර්ගයකි. "12 hours is enough" යන්නෙන් අදහස් කළේ විෂ ක්‍රියා කිරීමට ගතවන කාලයයි.</li>
+                    <li><strong>CCTV සාක්ෂි:</strong> රුවන් 9:30 ට පිටව ගිය පසු ප්‍රදීප් දොර ලොක් කර නින්දට ගොස් ඇත. නදීෂා 8:30 ට එන විටත් ප්‍රදීප් ජීවතුන් අතර සිටියත් විෂ ශරීරගත වී අවසානය. ඇය ළඟ තිබූ කඩදාසිය රුවන් විසින් ඇයව කොටු කිරීමට ඇගේ අත්බෑගයට හොර රහසේ දැමූවකි.</li>
+                    <li><strong>නිගමනය:</strong> සහන් හෝ නදීෂා එන විට දොර ඇතුළතින් ලොක් කර තිබීමෙන් තහවුරු වන්නේ මිනීමරුවා ඊට බොහෝ වෙලාවකට පෙර කාමරයෙන් පිටව ගිය අයෙකු බවයි.</li>
+                </ul>
+            </div>
+
+            <div style="margin-top: 30px; padding: 20px; border: 1px solid #333; text-align: center;">
+                <p style="color: #888;">ඔබ මෙම අභිරහස නිවැරදිව විසඳුවාද?</p>
+                <button class="feedback-btn" onclick="feedback('yes')" style="border: 1px solid #00ff00; color: #00ff00;">ඔව්, මම නිවැරදියි! 🕵️</button>
+                <button class="feedback-btn" onclick="feedback('no')" style="border: 1px solid #ff0000; color: #ff0000; margin-left: 10px;">තවම හිතනවා.. 🤔</button>
+            </div>
+        </div>
+
+        <center>
+            <p style="margin-top: 40px; color: #666;">ඔබේ අදහස් "Your Ideas" පිටුව හරහා අපට එවන්න.</p>
+            <a href="cases.html" class="back-btn" target="content-frame">← Back to Evidence Files</a>
+        </center>
+    </div>
+
+    <script>
+        function revealSolution() {
+            var solution = document.getElementById("solutionSection");
+            var btn = document.getElementById("revealBtn");
+            
+            solution.style.display = "block";
+            solution.scrollIntoView({ behavior: 'smooth' });
+            btn.style.display = "none";
+        }
+
+        function feedback(type) {
+            if(type === 'yes') {
+                alert("විශිෂ්ටයි! ඔබ කාලය සහ තර්කය හොඳින් ගලපා ගත්තා. 🔍");
+            } else {
+                alert("කමක් නැහැ, සැකකරුවන්ගේ කාල සටහන නැවත පරීක්ෂා කරන්න! 💪");
+            }
+        }
+    </script>
+
+</body>
+</html>
