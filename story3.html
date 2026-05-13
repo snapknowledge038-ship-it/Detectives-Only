@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mystery of the Blue Diamond Necklace - Case Files</title>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle, #1a0000 0%, #050000 100%);
+            color: #d1d1d1;
+            line-height: 1.8;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 2px solid #4a0000;
+        }
+
+        nav a {
+            color: #888;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff0000;
+            text-shadow: 0 0 8px #ff0000;
+        }
+
+        /* Story Container */
+        .story-container {
+            padding: 120px 20px 80px;
+            max-width: 900px;
+            margin: auto;
+            animation: fadeIn 2s ease-in;
+            text-align: justify;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #ff0000;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+        }
+
+        .case-meta {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            color: #ff0000;
+            border-left: 4px solid #4a0000;
+            padding-left: 15px;
+            margin-top: 40px;
+            text-transform: uppercase;
+        }
+
+        .highlight {
+            color: #fff;
+            font-weight: bold;
+            background: rgba(74, 0, 0, 0.3);
+            padding: 2px 5px;
+        }
+
+        .clue-box {
+            background: rgba(20, 0, 0, 0.6);
+            border: 1px dashed #4a0000;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .clue-box b {
+            color: #ff0000;
+        }
+
+        .statement {
+            border-left: 2px solid #4a0000;
+            padding-left: 15px;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .conclusion {
+            border-top: 2px solid #4a0000;
+            margin-top: 50px;
+            padding-top: 20px;
+            font-style: italic;
+            color: #ccc;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 10px 25px;
+            border: 1px solid #ff0000;
+            color: #ff0000;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #ff0000;
+            color: #000;
+        }
+
+        .vignette {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle, transparent 50%, black 150%);
+            pointer-events: none;
+            z-index: 5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="vignette"></div>
+
+    <nav>
+        <a href="stories.html">← Back to Stories</a>
+    </nav>
+
+    <div class="story-container">
+        <h1>නිල් දියමන්ති මාලයේ අබිරහස</h1>
+        <div class="case-meta">File No: #DT-205 | Case Title: The Mystery of the Blue Diamond Necklace</div>
+
+        <p>
+            මීදුමෙන් වැසුණු නුවරඑළියේ පිහිටි <span class="highlight">'වික්ටෝරියා මන්දිරය'</span> යනු බ්‍රිතාන්‍ය යුගයට අයත් පැරණි ඉංග්‍රීසි පන්නයේ මන්දිරයකි. එහි වෙසෙන වික්ටෝරියා මැතිණිය සතු වූ ලොව ප්‍රකට <span class="highlight">'නිල් දියමන්ති මාලය'</span> ඇයගේ හැත්තෑවන උපන් දින සාදයට පසු දින උදෑසන අභිරහස් ලෙස අතුරුදන් වී තිබුණි. මෙම මාලය මිල කළ නොහැකි ලෝක මට්ටමේ වස්තුවක් ලෙස සැලකේ.
+        </p>
+
+        <p>
+            පොලිස් පරීක්ෂක සමන් සමඟ විශේෂ උපදේශක රහස් පරීක්ෂක සීලරත්න මහතා මන්දිරයට පැමිණියේය. මාලය තබා තිබූ ආරක්ෂිත ලෝහමය පෙට්ටිය (Safe) විවෘත කිරීමට හැකි වූයේ රහස් අංකයකින් පමණක් වන අතර, පෙට්ටියට කිසිදු හානියක් සිදු වී නොතිබීමෙන් පෙනී ගියේ රහස් අංකය දන්නා අයෙකු මෙය සිදු කර ඇති බවයි.
+        </p>
+
+        <h3>අපරාධ ස්ථානයේ සූක්ෂ්ම නිරීක්ෂණ</h3>
+        <div class="clue-box">
+            <p><b>1. ජල බිඳිති සහ පියසටහන්:</b> ආරක්ෂිත පෙට්ටිය අසල මේසය මත කුඩා ජල බිඳිති කිහිපයක් තිබුණි. පිටත පැවති වර්ෂාව නිසා කෙනෙකු තෙත සපත්තුවලින් පැමිණි බවට එය සාක්ෂියකි.</p>
+            <p><b>2. අළු බඳුනේ නටබුන්:</b> මේසය මත තිබූ අළු බඳුනක (Ashtray) නිවා දැමූ මිල අධික 'කියුබානු' වර්ගයේ සුරුට්ටුවක ඉතිරි කොටසක් තිබුණි. එහි අළු තවමත් නැවුම් බවක් පෙන්වීය.</p>
+            <p><b>3. විවෘත ජනේලය:</b> උද්‍යානය දෙසට විවෘත වන විශාල ජනේලය මදක් විවෘතව තිබූ අතර, එහි රාමුව අසල තණකොළ පත්‍ර සහ මඩ ස්වල්පයක් රැඳී තිබුණි.</p>
+        </div>
+
+        <h3>සැකකරුවන්ගේ සාක්ෂි විමසීම</h3>
+        <div class="statement"><b>කමල් (පුත්‍රයා):</b> "මම රෑ 12 ට මගේ කාමරයට ගියා. මම රහස් අංකය දැනගෙන හිටියත් මට මගේ අම්මව රවට්ටන්න වුවමනාවක් නැහැ."</div>
+        <div class="statement"><b>ලක්ෂ්මන් (නීතිඥයා):</b> "මම රෑ 1 ට විතර මගේ කාමරයට ගියා. මම සාමාන්‍යයෙන් සුරුට්ටු බොන්නේ නැහැ."</div>
+        <div class="statement"><b>නිමල් (රියදුරු):</b> "මම රෑ පුරාම රථගාලේ කාර් එක ඇතුළෙමයි හිටියේ. මම කිසිම වෙලාවක මන්දිරය ඇතුළට ආවේ නැහැ."</div>
+
+        <h3>සීලරත්නගේ තියුණු නිගමනය</h3>
+        <p>
+            සීලරත්න මහතා ජනේලය අසල මඩ සහිත පොළොව දෙස බලා මදක් සිනාසුණේය. <span class="highlight">"සමන්, මේ හොරකම කළේ අපේ ඇස් පනාපිට ඉන්න නිමල්!"</span>
+        </p>
+
+        <p>
+            "නිමල්, ඔබ රහස් අංකය දැනගත්තේ මැතිණිය දුරකථනයෙන් එය පවසන විට රියදුරු අසුනේ සිට අසා සිටීමෙන්. ආරක්ෂිත පෙට්ටිය ළඟ තිබුණ ජල බිඳිති ඔබේ තෙත සපත්තුවලින් වැටුණු ඒවා. වඩාත්ම වැදගත් දේ තමයි අළු බඳුනේ තිබුණ සුරුට්ටු කොටස. ඔබේ කබායේ සාක්කුවේ තියෙන මිල අධික <b>'කියුබානු'</b> සුරුට්ටු පැකට්ටුව සහ ඔබේ කබායේ අතේ තැවරුණු අළු මගින් ඔබව හසු වෙනවා!"
+        </p>
+
+        <div class="conclusion">
+            සොරකම් කළ 'නිල් දියමන්ති මාලය' නිමල්ගේ රථයේ අමතර රෝදය තුළ සඟවා තිබියදී සොයා ගන්නා ලදී. සීලරත්න මහතාගේ තීක්ෂණ බුද්ධිය හමුවේ මැතිණියගේ පවුලේ අභිමානය නැවතත් සුරක්ෂිත විය.
+        </div>
+
+        <a href="stories.html" class="back-btn">Back to Story Files</a>
+    </div>
+
+</body>
+</html>
