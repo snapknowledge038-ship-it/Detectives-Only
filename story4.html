@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mystery of the Stolen Portrait - Case Files</title>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle, #1a0000 0%, #050000 100%);
+            color: #d1d1d1;
+            line-height: 1.8;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 2px solid #4a0000;
+        }
+
+        nav a {
+            color: #888;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff0000;
+            text-shadow: 0 0 8px #ff0000;
+        }
+
+        /* Story Container */
+        .story-container {
+            padding: 120px 20px 80px;
+            max-width: 900px;
+            margin: auto;
+            animation: fadeIn 2s ease-in;
+            text-align: justify;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #ff0000;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+        }
+
+        .case-meta {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            color: #ff0000;
+            border-left: 4px solid #4a0000;
+            padding-left: 15px;
+            margin-top: 40px;
+            text-transform: uppercase;
+        }
+
+        .highlight {
+            color: #fff;
+            font-weight: bold;
+            background: rgba(74, 0, 0, 0.3);
+            padding: 2px 5px;
+        }
+
+        .clue-box {
+            background: rgba(20, 0, 0, 0.6);
+            border: 1px dashed #4a0000;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .clue-box b {
+            color: #ff0000;
+        }
+
+        .statement {
+            border-left: 2px solid #4a0000;
+            padding-left: 15px;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .conclusion {
+            border-top: 2px solid #4a0000;
+            margin-top: 50px;
+            padding-top: 20px;
+            font-style: italic;
+            color: #ccc;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 10px 25px;
+            border: 1px solid #ff0000;
+            color: #ff0000;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #ff0000;
+            color: #000;
+        }
+
+        .vignette {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle, transparent 50%, black 150%);
+            pointer-events: none;
+            z-index: 5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="vignette"></div>
+
+    <nav>
+        <a href="stories.html">← Back to Stories</a>
+    </nav>
+
+    <div class="story-container">
+        <h1>අතුරුදන් වූ රජ රූපයේ අබිරහස</h1>
+        <div class="case-meta">File No: #DT-312 | Case Title: The Mystery of the Stolen Portrait</div>
+
+        <p>
+            කෑගල්ලේ හන්තාන කඳු පන්තියට නුදුරු ඈත කෙළවරක පිහිටි <span class="highlight">'සිරි නිවාස'</span> වලව්ව වසර සිය ගණනක් පැරණි ගාම්භීර මන්දිරයකි. එහි තිබූ වටිනාම වස්තුව වූයේ මහනුවර යුගයට අයත් අතිශය දුර්ලභ <span class="highlight">'රජ රූපය'</span> නමැති සිතුවමයි. එක් වැසි බර රාත්‍රියක, වලව්වේ සියලු දෙනා නිදා සිටියදී, මෙම සිතුවම එහි අලංකාර තේක්ක ලී රාමුවෙන් සූක්ෂ්ම ලෙස කපා සොරකම් කර තිබුණි.
+        </p>
+
+        <p>
+            පොලිස් පරීක්ෂක සමන් සමඟ විශේෂ විමර්ශක සීලරත්න මහතා වලව්වට ළඟා වූහ. ආරක්ෂක කැමරා පද්ධතිය එම රාත්‍රියේම තාක්ෂණික දෝෂයකින් ක්‍රියා විරහිත වී තිබීම විමර්ශනයට මහත් සැකයට කරුණක් විය. සීලරත්න මහතා සිය තීක්ෂණ බුද්ධියෙන් සාක්ෂි සෙවීම ආරම්භ කළේය.
+        </p>
+
+        <h3>අපරාධ ස්ථානයේ රහස් සලකුණු</h3>
+        <div class="clue-box">
+            <p><b>1. වෘත්තීය කැපුම් සලකුණු:</b> සිතුවම රාමුවෙන් වෙන් කිරීමට ඉතා තියුණු ශල්‍ය පිහියක් (Scalpel) භාවිතා කර තිබුණි. කැපුම් ඉතා කෙළින් සහ නිවැරදිව සිදු කර තිබුණේ සැත්කමක් කරන්නාක් මෙනි.</p>
+            <p><b>2. සුවඳ විලවුන් සහ රසායනික සලකුණ:</b> රාමුව අසල පැහැදිලි 'ලැවැන්ඩර්' සුවඳක් සහ රෝහල්වල භාවිතා කරන ප්‍රබල විෂබීජ නාශක දියරයක (Alcohol Sanitizer) බිංදුවක් වැටී තිබුණි.</p>
+            <p><b>3. රිදී බොත්තම:</b> මේසයක් යට බිම වැටී තිබූ, වංශවත් අයෙකු පලඳින උඩු කබායකට (Blazer) අයත් වටිනා රිදී පැහැති කැටයම් සහිත බොත්තමක් හමු විය.</p>
+        </div>
+
+        <h3>සැකකරුවන්ගේ සාක්ෂි විමසීම</h3>
+        <div class="statement"><b>සුනිල් (භාරකරු):</b> "මම රෑ 11 ට නිදාගන්න ගියා. මම අවුරුදු 20 ක් මේ වලව්ව ආරක්ෂා කරනවා, මම කවදාවත් මෙහෙම දෙයක් කරන්නේ නැහැ."</div>
+        <div class="statement"><b>වෛද්‍ය අසංක (අමුත්තා):</b> "මම ඊයේ රෑ ගොඩක් මහන්සි වෙලා හිටපු නිසා රෑ 10 ට විතරම නිදාගත්තා. මම සිතුවම් ගැන ලොකු උනන්දුවක් නැති කෙනෙක්."</div>
+        <div class="statement"><b>නිමලී (ලේකම්):</b> "මම රෑ 12 වෙනකම් පුස්තකාලයේ වැඩ කළා. ඒ වෙලාවේ කොරිඩෝව දෙසින් ලැවැන්ඩර් සුවඳක් දැනුණා."</div>
+
+        <h3>සීලරත්නගේ අවසන් තීන්දුව</h3>
+        <p>
+            සීලරත්න මහතා වෛද්‍ය අසංක දෙස බලා තීක්ෂණ සිනහවක් පෑවේය. <span class="highlight">"සමන්, මේ සොරකම කළේ අපේ ඇස් පනාපිට ඉන්න වෛද්‍ය අසංක!"</span>
+        </p>
+
+        <p>
+            "අසංක, ඔබ භාවිතා කරන විෂබීජ නාශක දියරයේ තියෙන්නේ ලැවැන්ඩර් සුවඳයි. ඔබ සිතුවම කපන්න පාවිච්චි කළේ ඔබේ වෛද්‍ය බෑගයේ තියෙන ශල්‍ය පිහියක්. වඩාත්ම වැදගත් දේ තමයි, ඔබ ඇඳගෙන හිටපු නිල් පැහැති බ්ලේසර් කබායේ අත් බෝලයේ තිබුණ රිදී බොත්තමක් අඩුවෙලා තිබීම. ඒ බොත්තම මට සිතුවම ළඟ තිබී හමු වුණා!"
+        </p>
+
+        <div class="conclusion">
+            වෛද්‍ය අසංකගේ වෛද්‍ය උපකරණ පෙට්ටිය පරීක්ෂා කිරීමේදී ඉතා සුරක්ෂිතව සඟවා තිබූ 'රජ රූපය' සිතුවම සොයා ගැනීමට හැකි විය. සීලරත්න මහතාගේ බුද්ධි මහිමයෙන් රටේ වටිනා උරුමයක් විනාශ වීමෙන් බේරා ගැනීමට හැකි විය.
+        </div>
+
+        <a href="stories.html" class="back-btn">Back to Story Files</a>
+    </div>
+
+</body>
+</html>
