@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detectives Only - Home</title>
+    <style>
+        /* මූලික සැකසුම් */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a; /* කළු පැහැයට හුරු පසුබිමක් */
+            color: #ffffff;
+            text-align: center;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #333;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #f39c12; /* රන්වන් පැහැය */
+        }
+
+        /* Share Button */
+        .share-btn {
+            position: absolute;
+            right: 20px;
+            background-color: #f39c12;
+            color: black;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Main Content */
+        .container {
+            padding: 100px 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #f39c12;
+        }
+
+        .description {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            color: #cccccc;
+        }
+
+        /* Cases Button */
+        .cta-button {
+            display: inline-block;
+            background-color: #f39c12;
+            color: #000;
+            padding: 15px 40px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #e67e22;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="cases.html">Cases</a>
+        <a href="yi.html">Your Idea</a>
+        <button class="share-btn" onclick="sharePage()">Share</button>
+    </nav>
+
+    <div class="container">
+        <h1>Detectives Only</h1>
+        
+        <p class="description">
+            සැබෑ රහස් පරීක්ෂකයෙකුට කිසිම දෙයක් මගහැරෙන්නේ නැත. ඔබත් අභියෝග වලට කැමති කෙනෙක්ද? 
+            එහෙනම් අප විසින් ඉදිරිපත් කරන 'Crime Cases' වල සැඟවුණු රහස් අනාවරණය කරගන්න. 
+            හැම ප්‍රශ්නයකටම උත්තරයක් තියෙනවා, ඒක හොයාගන්න පුළුවන් දක්ෂතම අයට විතරයි. <br><br>
+            <strong>Detectives Only – සත්‍යය සොයා යන ගමන.</strong>
+        </p>
+
+        <a href="cases.html" class="cta-button">Cases</a>
+    </div>
+
+    <script>
+        // පිටුව Share කිරීමට අවශ්‍ය Function එක
+        function sharePage() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Detectives Only',
+                    text: 'අසමසම අපරාධ පරීක්ෂණ අභියෝග විසඳන්න එක්වන්න!',
+                    url: window.location.href
+                }).then(() => {
+                    console.log('Shared successfully');
+                }).catch((error) => {
+                    console.log('Error sharing:', error);
+                });
+            } else {
+                alert("ඔබේ Browser එක මගින් Share කිරීමේ පහසුකම ලබා දී නොමැත. URL එක Copy කර Share කරන්න.");
+            }
+        }
+    </script>
+
+</body>
+</html>
