@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mystery of the Stolen Blue Sapphire - Case Files</title>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle, #1a0000 0%, #050000 100%);
+            color: #d1d1d1;
+            line-height: 1.8;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 2px solid #4a0000;
+        }
+
+        nav a {
+            color: #888;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff0000;
+            text-shadow: 0 0 8px #ff0000;
+        }
+
+        /* Story Container */
+        .story-container {
+            padding: 120px 20px 80px;
+            max-width: 900px;
+            margin: auto;
+            animation: fadeIn 2s ease-in;
+            text-align: justify;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #ff0000;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+        }
+
+        .case-meta {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            color: #ff0000;
+            border-left: 4px solid #4a0000;
+            padding-left: 15px;
+            margin-top: 40px;
+            text-transform: uppercase;
+        }
+
+        .highlight {
+            color: #fff;
+            font-weight: bold;
+            background: rgba(74, 0, 0, 0.3);
+            padding: 2px 5px;
+        }
+
+        .clue-box {
+            background: rgba(20, 0, 0, 0.6);
+            border: 1px dashed #4a0000;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .clue-box b {
+            color: #ff0000;
+        }
+
+        .statement {
+            border-left: 2px solid #4a0000;
+            padding-left: 15px;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .conclusion {
+            border-top: 2px solid #4a0000;
+            margin-top: 50px;
+            padding-top: 20px;
+            font-style: italic;
+            color: #ccc;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 10px 25px;
+            border: 1px solid #ff0000;
+            color: #ff0000;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #ff0000;
+            color: #000;
+        }
+
+        .vignette {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle, transparent 50%, black 150%);
+            pointer-events: none;
+            z-index: 5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="vignette"></div>
+
+    <nav>
+        <a href="stories.html">← Back to Stories</a>
+    </nav>
+
+    <div class="story-container">
+        <h1>අතුරුදන් වූ නිල් මැණිකේ අබිරහස</h1>
+        <div class="case-meta">File No: #DT-415 | Case Title: The Mystery of the Stolen Blue Sapphire</div>
+
+        <p>
+            කොළඹ වරාය ආසන්නයේ පිහිටි 'ග්‍රෑන්ඩ් මැරීන්' හෝටලයේ පැවැත්වූ ජාත්‍යන්තර මැණික් ප්‍රදර්ශනයකදී, ලොව ප්‍රකට <span class="highlight">'සඳකැන් නිල් මැණික'</span> අතුරුදන් විය. රුපියල් කෝටි ගණනක් වටිනා මෙම මැණික ප්‍රදර්ශනය කර තිබුණේ අති නවීන වෙඩි නොවදින වීදුරු කුටීරයක් තුළය.
+        </p>
+
+        <p>
+            පොලිස් පරීක්ෂක සමන් සමඟ විශේෂ විමර්ශක සීලරත්න මහතා හෝටලයට ළඟා විය. වීදුරු කුටීරයට කිසිදු හානියක් සිදු වී නොතිබීමෙන් පෙනී ගියේ මෙය ආරක්ෂක පද්ධතිය හොඳින් දන්නා අයෙකු විසින් කරන ලද සැලසුම් සහගත අපරාධයක් බවයි.
+        </p>
+
+        <h3>අපරාධ ස්ථානයේ රහස් සලකුණු</h3>
+        <div class="clue-box">
+            <p><b>1. මහත අත්ලක සහ රසායනික කුඩු සලකුණු:</b> වීදුරු මතුපිට දෑත් ලිස්සා යාම වැළැක්වීමට භාවිතා කරන 'මැග්නීසියම් පවුඩර්' තැවරී තිබුණි. එහි මහත අත්ලක සලකුණක් පැහැදිලිව දිස් විය.</p>
+            <p><b>2. මුහුදු වැලි සහ පැලෑටි:</b> ප්‍රදර්ශන මේසය පාමුල තිබී ඉතා සියුම් මුහුදු වැලි ස්වල්පයක් සහ වියළී ගිය මුහුදු පැලෑටි කැබැල්ලක් හමු විය.</p>
+            <p><b>3. කැඩී ගිය නියපොත්ත:</b> වීදුරු කුටීරයේ රහස් අගුල පිහිටි ස්ථානයේ තිබී ඉතා කුඩා, කැඩී ගිය නියපොතු කැබැල්ලක් සහ සියුම් සීරීම් හමු විය.</p>
+        </div>
+
+        <h3>සැකකරුවන්ගේ සාක්ෂි විමසීම</h3>
+        <div class="statement"><b>අජිත් (ආරක්ෂක නිලධාරියා):</b> "මම මුළු රාත්‍රියම ප්‍රධාන දොර අසල රාජකාරියේ හිටියේ. මම කිසිම කෙනෙකුට ඇතුළට එන්න දුන්නේ නැහැ." (සීලරත්න දුටුවේ ඔහුගේ අත් වෙව්ලන ආකාරයයි).</div>
+        <div class="statement"><b>රෝහිත (මැණික් වෙළෙන්දා):</b> "මම වසර තිහක අත්දැකීම් තියෙන ව්‍යාපාරිකයෙක්. මම මැණික් අල්ලන්නේ අත් වැසුම් පාවිච්චි කරලා."</div>
+        <div class="statement"><b>කැෂියර් (සේවකයා):</b> "මම මගේ නිවාඩු වෙලාවේ වෙරළේ ඇවිදලා ආවේ. මම මේ පැත්තට ආවේ අහම්බෙන්."</div>
+
+        <h3>සීලරත්නගේ අවසන් නිගමනය</h3>
+        <p>
+            සීලරත්න මහතා ආරක්ෂක නිලධාරී අජිත් දෙසට හැරී තියුණු බැල්මක් හෙළුවේය. <span class="highlight">"සමන්, මේ සොරකම කළේ අපේ විශ්වාසය දිනාගෙන සිටි අජිත්!"</span>
+        </p>
+
+        <p>
+            "අජිත්, වීදුරුව මත තිබූ පවුඩර් ඔබේ නිල ඇඳුමේ තැවරී තිබුණා. අගුල විවෘත කිරීමේදී ඔබේ සුළැඟිල්ලේ නියපොත්ත කැඩී ඇති අතර, තවමත් එම තුවාලය ඔබේ අතේ තිබෙනවා. ඔබ මැණික සොරකම් කර, හෝටලයෙන් පිටත වෙරළ පැත්තේ පිහිනුම් තටාකය අසල වැලි ගොඩක සඟවා ඇති බව ඔබේ පාවහන්වල රැඳී ඇති මුහුදු වැලි සාක්ෂි දරනවා!"
+        </p>
+
+        <div class="conclusion">
+            අජිත් සිය වරද පිළිගත් අතර, ඔහු සඟවා තිබූ 'සඳකැන් නිල් මැණික' කිසිදු හානියක් නොමැතිව සොයා ගැනීමට හැකි විය. සීලරත්න මහතාගේ තර්කානුකූල බුද්ධිය නිසා වටිනා ජාතික උරුමයක් නැවතත් සුරක්ෂිත විය.
+        </div>
+
+        <a href="stories.html" class="back-btn">Back to Story Files</a>
+    </div>
+
+</body>
+</html>
