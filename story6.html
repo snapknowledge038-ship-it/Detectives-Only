@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mystery of the Stolen Golden Swan - Case Files</title>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle, #1a0000 0%, #050000 100%);
+            color: #d1d1d1;
+            line-height: 1.8;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 2px solid #4a0000;
+        }
+
+        nav a {
+            color: #888;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff0000;
+            text-shadow: 0 0 8px #ff0000;
+        }
+
+        /* Story Container */
+        .story-container {
+            padding: 120px 20px 80px;
+            max-width: 900px;
+            margin: auto;
+            animation: fadeIn 2s ease-in;
+            text-align: justify;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #ff0000;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+        }
+
+        .case-meta {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            color: #ff0000;
+            border-left: 4px solid #4a0000;
+            padding-left: 15px;
+            margin-top: 40px;
+            text-transform: uppercase;
+        }
+
+        .highlight {
+            color: #fff;
+            font-weight: bold;
+            background: rgba(74, 0, 0, 0.3);
+            padding: 2px 5px;
+        }
+
+        .clue-box {
+            background: rgba(20, 0, 0, 0.6);
+            border: 1px dashed #4a0000;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .clue-box b {
+            color: #ff0000;
+        }
+
+        .statement {
+            border-left: 2px solid #4a0000;
+            padding-left: 15px;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .conclusion {
+            border-top: 2px solid #4a0000;
+            margin-top: 50px;
+            padding-top: 20px;
+            font-style: italic;
+            color: #ccc;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 10px 25px;
+            border: 1px solid #ff0000;
+            color: #ff0000;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #ff0000;
+            color: #000;
+        }
+
+        .vignette {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle, transparent 50%, black 150%);
+            pointer-events: none;
+            z-index: 5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="vignette"></div>
+
+    <nav>
+        <a href="stories.html">← Back to Stories</a>
+    </nav>
+
+    <div class="story-container">
+        <h1>අතුරුදන් වූ රන් හංසයාගේ අබිරහස</h1>
+        <div class="case-meta">File No: #DT-510 | Case Title: The Mystery of the Stolen Golden Swan</div>
+
+        <p>
+            අනුරාධපුරයේ 'ගිරිවැසි' පුරාණ විහාරස්ථානයේ තිබූ පූජනීයම වස්තුව වූයේ මහා පරාක්‍රමබාහු රජ සමයට අයත් පිරිසිදු රනින් නිමවා ඇති <span class="highlight">'රන් හංසයා'</span> පිළිමයයි. දැඩි වර්ෂාවක් පැවති රාත්‍රියක, විශේෂ ආරක්ෂිත වීදුරු කුටීරයක තිබූ මෙම පිළිමය අභිරහස් ලෙස අතුරුදන් විය.
+        </p>
+
+        <p>
+            විශේෂ විමර්ශක සීලරත්න මහතා සහ පරීක්ෂක සමන් එම ස්ථානයට ළඟා වූහ. කිසිදු ශබ්දයක් හෝ කලබලයක් නොමැතිව සිදු වූ මෙම සොරකම පිටුපස සූක්ෂ්ම සැලසුමක් ඇති බව සීලරත්න මහතා ඉවෙන් මෙන් වටහා ගත්තේය.
+        </p>
+
+        <h3>අපරාධ ස්ථානයේ රහස් සලකුණු</h3>
+        <div class="clue-box">
+            <p><b>1. කළු පැහැති මඩ සලකුණු:</b> බිම තිබී වැව ආශ්‍රිත වගුරු ප්‍රදේශයට පමණක් සීමා වූ විශේෂිත රොන්මඩ සහිත සපත්තු අඩි සලකුණු හමු විය.</p>
+            <p><b>2. නැවුම් සීරීම් සලකුණ:</b> විහාර ගෙයි පිටුපස ජනේලයේ ලී රාමුව මත වෘත්තීය මට්ටමේ සොරකම් සඳහා භාවිතා කරන 'ක්‍රෝබාර්' (Crowbar) එකකින් සිදු කළ සීරීමක් දක්නට ලැබුණි.</p>
+            <p><b>3. කැඩී ගිය නූල් කැබැල්ල:</b> ජනේලයේ ලී වැටක පැටලී තිබී ඉතා මිල අධික කෘත්‍රිම රෙදි වර්ගයකට අයත් කහ පැහැති ඝන නූල් කැබැල්ලක් හමු විය.</p>
+        </div>
+
+        <h3>සැකකරුවන්ගේ සාක්ෂි විමසීම</h3>
+        <div class="statement"><b>ගුණපාල (මුරකරු):</b> "මම රාත්‍රී 12 වෙනකම් ප්‍රධාන දොර අසල හිටියා. මට කිසිම අමුත්තෙක් පෙනුණේ නැහැ."</div>
+        <div class="statement"><b>සිරිසේන (ධීවරයෙක්):</b> "මම වැස්සෙන් බේරෙන්න පන්සලේ පිටුපස ජනේලය ගාව ටික වෙලාවක් හිටියා." (ඔහුගේ සරමේ තිබුණේ සාමාන්‍ය වැලි මඩයි).</div>
+        <div class="statement"><b>පියසිරි (වෙළෙන්දා):</b> "මම නගරයේ ඉඳන් පන්සලට ආවේ පරිත්‍යාගයක් භාර දෙන්න. මම මගේ වාහනයේමයි හිටියේ." (ඔහුගේ දෑස් කලබලයෙන් පිරී තිබුණි).</div>
+
+        <h3>සීලරත්නගේ තීක්ෂණ හෙළිදරව්ව</h3>
+        <p>
+            සීලරත්න මහතා පියසිරි දෙසට හැරී තියුණු බැල්මක් හෙළුවේය. <span class="highlight">"සමන්, මේ සොරකම කළේ පුරාවස්තු ගැන හොඳ දැනුමක් තියෙන මේ පියසිරි!"</span>
+        </p>
+
+        <p>
+            "පියසිරි, ඔබේ වාහනයේ පාපිසිවල ඒ විශේෂිත කළු රොන්මඩ පැහැදිලිව තැවරිලා තියෙනවා. ඔබ ජනේලය කඩන්න පාවිච්චි කළ ආයුධය වාහනයේ අමතර රෝදය අසල සඟවා තිබෙනවා මම දුටුවා. වඩාත්ම වැදගත් දේ තමයි, ඔබේ කහ පැහැති අත් ඔරලෝසු පටියේ නූල් කැඩිලා තියෙන්නේ ජනේලයේ වැදිලා. මට හමුවුණු ඒ කහ නූල් කැබැල්ල ඔබේ ඔරලෝසු පටියට හරියටම ගැලපෙනවා!"
+        </p>
+
+        <div class="conclusion">
+            පියසිරිගේ වාහනයේ ඩිකියේ තිබූ රෙදි පොදියක් ඇතුළේ සඟවා තිබූ 'රන් හංසයා' පිළිමය සොයා ගැනීමට හැකි විය. සීලරත්න මහතාගේ තියුණු නිරීක්ෂණ නිසා අභිමානවත් ජාතික උරුමයක් රටින් පිටවීමට පෙර බේරා ගැනීමට හැකි විය.
+        </div>
+
+        <a href="stories.html" class="back-btn">Back to Story Files</a>
+    </div>
+
+</body>
+</html>
