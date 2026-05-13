@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case 03 - ප්‍රාර්ථනා බිඳුණු මංගල්‍යය</title>
+    <style>
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        body { font-family: 'Courier New', Courier, monospace; background: radial-gradient(circle, #1a0000 0%, #050000 100%); color: #d1d1d1; line-height: 1.6; margin: 0; padding: 0; scroll-behavior: smooth; }
+        nav { background: rgba(0, 0, 0, 0.9); padding: 20px; display: flex; justify-content: center; border-bottom: 2px solid #4a0000; position: fixed; top: 0; width: 100%; z-index: 1000; }
+        nav a { color: #888; text-decoration: none; margin: 0 20px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; }
+        nav a:hover { color: #ff0000; text-shadow: 0 0 5px #ff0000; }
+        .container { max-width: 900px; margin: 120px auto 50px; padding: 20px; animation: fadeIn 1s ease-out; }
+        .case-header { text-align: center; border-bottom: 3px double #4a0000; padding-bottom: 20px; margin-bottom: 30px; }
+        .case-header h1 { color: #ff0000; font-size: 2.2rem; margin: 5px 0; letter-spacing: 3px; }
+        .section { background: rgba(20, 0, 0, 0.6); border-left: 4px solid #4a0000; padding: 20px; margin-bottom: 20px; }
+        .section h3 { color: #ff0000; text-transform: uppercase; border-bottom: 1px solid #330000; padding-bottom: 5px; }
+        .timeline-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.9rem; }
+        .timeline-table th, .timeline-table td { border: 1px solid #330000; padding: 10px; text-align: left; }
+        .timeline-table th { background: #4a0000; color: white; }
+        .evidence-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .clue-card { background: rgba(0,0,0,0.4); padding: 15px; border: 1px solid #330000; }
+        .clue-card span { color: #ff0000; font-weight: bold; display: block; margin-bottom: 5px; }
+        .question-box { background: #4a0000; color: #fff; padding: 25px; text-align: center; border-radius: 5px; margin: 40px 0; }
+        .cta-button { display: inline-block; background: transparent; color: #ff0000; padding: 12px 40px; border: 2px solid #ff0000; text-transform: uppercase; font-weight: bold; cursor: pointer; transition: 0.4s; }
+        .cta-button:hover { background: #ff0000; color: #000; box-shadow: 0 0 20px #ff0000; }
+        @media (max-width: 600px) { .evidence-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="cases.html">Cases</a>
+        <a href="yi.html">Your Ideas</a>
+    </nav>
+
+    <div class="container">
+        <div class="case-header">
+            <span style="color: #ff0000; border: 1px solid #ff0000; padding: 2px 10px;">HIGH PROFILE CASE #003</span>
+            <h1>ප්‍රාර්ථනා බිඳුණු මංගල්‍යය</h1>
+            <p>Cinnamon Grand, Colombo | 2026.06.15 | 11:45 AM</p>
+        </div>
+
+        <div class="section">
+            <h3>අපරාධ ස්ථානය (The Scene)</h3>
+            <p>මනමාලයා වන <strong>නිශාන් ප්‍රනාන්දු</strong>, තාලි බඳින්නට විනාඩි 5කට පෙර Bridal Room එක තුළ මියගොස් සිටියදී හමුවිය. පපුවට එල්ල කළ තනි පිහි පහරකින් මරණය සිදුවී ඇත.</p>
+        </div>
+
+        <div class="section">
+            <h3>විමර්ශන කාලරාමුව (Timeline)</h3>
+            <table class="timeline-table">
+                <tr>
+                    <th>කාලය</th>
+                    <th>සිදුවීම</th>
+                </tr>
+                <tr><td>11:35 AM</td><td>නිශාන් FB Live එක අවසන් කර අසංක සමඟ Champagne වීදුරුවක් බොයි.</td></tr>
+                <tr><td>11:37 AM</td><td>නිශාන් තනියම Bridal Room එක දෙසට යයි.</td></tr>
+                <tr><td>11:38 AM</td><td>නොදන්නා අංකයකින් (Unknown) තත්පර 8ක කෙටි ඇමතුමක් ලැබෙයි.</td></tr>
+                <tr><td>11:40 AM</td><td>මනමාලි (තරුෂි) කාමරය අසලට එයි. දොර ඇර තිබෙනු දකියි.</td></tr>
+                <tr><td>11:45 AM</td><td>මැනේජර් නිමල් විසින් මළ සිරුර සොයා ගනියි.</td></tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h3>වැදගත් සාක්ෂි (Key Evidence)</h3>
+            <div class="evidence-grid">
+                <div class="clue-card">
+                    <span>1. Champagne Glasses:</span> මේසය මත වීදුරු දෙකකි. එකක තද රතු <strong>Lipstick</strong> සලකුණක් ඇත.
+                </div>
+                <div class="clue-card">
+                    <span>2. මල් පෙත්ත:</span> නිශාන්ගේ අතේ තරුෂිගේ Bouquet එකේ තිබූ <strong>කඩුපුල්</strong> මල් පෙත්තක් ඇත.
+                </div>
+                <div class="clue-card">
+                    <span>3. ජනේලය:</span> කාමරයේ ජනේලය මඳක් විවෘතව ඇත. (සුවඳක් පිටවීමට ද?)
+                </div>
+                <div class="clue-card">
+                    <span>4. CCTV:</span> 11:30 - 11:50 කාලයේදී "තාක්ෂණික දෝෂයක්" මත CCTV ක්‍රියා විරහිත කර ඇත.
+                </div>
+            </div>
+        </div>
+
+        <div class="question-box">
+            <p>මිනීමරුවා කවුද? 11:38 ඇමතුම ගත්තේ කවුද? Lipstick සහ මල් පෙත්ත පිටුපස ඇති සැබෑ කුමන්ත්‍රණය කුමක්ද?</p>
+        </div>
+
+        <center>
+            <button class="cta-button" onclick="revealSolution()" id="revealBtn">Show Investigation Report</button>
+        </center>
+
+        <div id="solutionSection" style="display: none; margin-top: 50px; animation: fadeIn 1.5s ease-in;">
+            <div class="section" style="border-color: #00ff00; background: rgba(0, 20, 0, 0.4);">
+                <h3 style="color: #00ff00;">විමර්ශන ප්‍රතිඵලය (Solution)</h3>
+                <p><strong>මිනීමරුවා:</strong> අසංක (Best Man)</p>
+                <p><strong>විමර්ධන වාර්තාව:</strong></p>
+                <ul>
+                    <li><strong>බොරුව (The Stage):</strong> Lipstick සලකුණ සහ කඩුපුල් මල් පෙත්ත මිනීමරුවා විසින් සැලසුම් කරන ලද දේවල්ය (Staged). ඔහුට අවශ්‍ය වූයේ වරද තරුෂි හෝ ඉෂාරා මත පැටවීමටයි.</li>
+                    <li><strong>ඇමතුම (11:38):</strong> අසංක විසින්ම තත්පර 8ක ඇමතුමක් ගත්තේ නිශාන් කාමරය තුළ සිටිනවාදැයි තහවුරු කර ගැනීමටයි.</li>
+                    <li><strong>අපරාධය සිදු කළ අයුරු:</strong> අසංක 11:35 ට නිශාන් සමඟ Champagne බී බව පැවසුවද, ඇත්තටම ඔහු නිශාන් සමඟ Bridal Room එකට ඇතුළු විය. සැකයක් නොහිතෙන පරිදි නිශාන්ට පිහියෙන් ඇන මරා දැමූ ඔහු, තරුෂිගේ රතු ලිප්ස්ටික් හොරෙන් ගෙන වීදුරුවේ තවරා මල් පෙත්තක් මියගිය නිශාන්ගේ අතට තබා ඇත.</li>
+                    <li><strong>ජනේලය:</strong> ඔහු ජනේලය ඇරියේ තමා පාවිච්චි කළ සුවඳ විලවුන් වර්ගයක හෝ Champagne සුවඳ කාමරයෙන් ඉවත් කර තමා එහි සිටි බවට ඉඟියක් ඉතිරි නොකිරීමටයි.</li>
+                    <li><strong>CCTV:</strong> ඔහු මැනේජර් සමඟ එක්ව හෝ මැනේජර් ලවා CCTV ඕෆ් කරවා ගත්තේ තම මිනීමැරුම වසන් කිරීමටයි.</li>
+                </ul>
+            </div>
+            <div style="text-align: center; padding: 20px;">
+                <button class="cta-button" onclick="alert('Congratulations Detective!')" style="border-color: #00ff00; color: #00ff00;">I Solved It!</button>
+            </div>
+        </div>
+
+        <center>
+            <a href="cases.html" style="color: #666; text-decoration: none; display: block; margin-top: 30px;">← Back to Case Files</a>
+        </center>
+    </div>
+
+    <script>
+        function revealSolution() {
+            document.getElementById("solutionSection").style.display = "block";
+            document.getElementById("solutionSection").scrollIntoView({ behavior: 'smooth' });
+            document.getElementById("revealBtn").style.display = "none";
+        }
+    </script>
+</body>
+</html>
