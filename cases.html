@@ -17,6 +17,7 @@
             background: radial-gradient(circle, #1a0000 0%, #050000 100%);
             color: #d1d1d1;
             text-align: center;
+            overflow-x: hidden;
         }
 
         /* Navigation Bar */
@@ -50,7 +51,7 @@
 
         /* Container */
         .container {
-            padding: 120px 20px 50px;
+            padding: 120px 20px 80px; /* පහළින් වැඩිපුර ඉඩක් තබා ඇත */
             max-width: 800px;
             margin: auto;
             animation: fadeIn 1.5s ease-in;
@@ -118,6 +119,34 @@
             text-transform: uppercase;
         }
 
+        /* Action Buttons Styling */
+        .action-buttons {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding-bottom: 40px;
+        }
+
+        .btn-footer {
+            background: transparent;
+            color: #ff0000;
+            border: 1px solid #ff0000;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .btn-footer:hover {
+            background: #ff0000;
+            color: #000;
+            box-shadow: 0 0 15px #ff0000;
+        }
+
         /* Vignette Effect */
         .vignette {
             position: fixed;
@@ -130,6 +159,7 @@
         @media (max-width: 600px) {
             h2 { font-size: 1.8rem; }
             .case-item { font-size: 1rem; }
+            .action-buttons { flex-direction: column; align-items: center; }
         }
     </style>
 </head>
@@ -140,7 +170,7 @@
     <nav>
         <div style="display: flex;">
             <a href="index.html" target="content-frame">Home</a>
-            <a href="cases.html" target="content-frame">Cases</a>
+            <a href="cases.html" target="content-frame" class="active">Cases</a>
             <a href="yi.html" target="content-frame">Your Ideas</a>
         </div>
     </nav>
@@ -150,37 +180,41 @@
         <p>විසඳීමට ඇති අපරාධ වාර්තා පරීක්ෂා කරන්න. එකක් තෝරාගෙන පරීක්ෂණය ආරම්භ කරන්න.</p>
 
         <div class="case-list">
-            <a href="case1.html" class="case-item">
+            <a href="case1.html" class="case-item" target="content-frame">
                 01. ප්‍රදීපාගාරයේ මරණීය හෝරාව (The Lighthouse Death Hour)
                 <span>Status: Open</span>
             </a>
 
-            <a href="case2.html" class="case-item">
+            <a href="case2.html" class="case-item" target="content-frame">
                 02. සලකුණු කළ හෝරාව (The Marked Hour)
                 <span>Status: Open</span>
             </a>
 
-            <a href="case3.html" class="case-item">
+            <a href="case3.html" class="case-item" target="content-frame">
                 03. ප්‍රාර්ථනා බිඳුණු මංගල්‍යය (The Shattered Vows)
                 <span>Status: Hard</span>
             </a>
 
-            <a href="case4.html" class="case-item">
+            <a href="case4.html" class="case-item" target="content-frame">
                 04. මාරාන්තික සජීවී විකාශය (The Fatal Live Stream)
                 <span>Status: Open</span>
             </a>
 
-            <a href="case5.html" class="case-item">
+            <a href="case5.html" class="case-item" target="content-frame">
                 05. කඩුවෙල වලව්වේ නොපෙනෙන පිහිය
                 <span>Status: Open</span>
             </a>
 
-            <a href="case6.html" class="case-item">
+            <a href="case6.html" class="case-item" target="content-frame">
                 06. මහනුවර හෝටලයේ කාමර අංක 305 අභිරහස
                 <span>Status: Open</span>
             </a>
+        </div>
 
-            </div>
+        <div class="action-buttons">
+            <a href="index.html" class="btn-footer" target="content-frame">Back to Home</a>
+            <a href="yi.html" class="btn-footer" target="content-frame">Suggest an Idea</a>
+        </div>
     </div>
 
 </body>
