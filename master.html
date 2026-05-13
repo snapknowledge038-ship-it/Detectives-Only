@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detectives Only</title>
+    <style>
+        /* මුළු පිටුවම ආවරණය වන පරිදි සැකසීම */
+        body, html { 
+            margin: 0; 
+            padding: 0; 
+            height: 100%; 
+            width: 100%;
+            overflow: hidden; 
+            background-color: #050000;
+        }
+
+        /* වෙබ් පිටු පෙන්වන ජනේලය */
+        iframe { 
+            width: 100%; 
+            height: 100%; 
+            border: none; 
+        }
+
+        /* Music Control Button - රතු පැහැති තේමාවට අනුව */
+        #music-control {
+            position: fixed; 
+            bottom: 30px; 
+            right: 30px;
+            z-index: 9999; 
+            background: rgba(74, 0, 0, 0.9); 
+            color: #ff0000; 
+            padding: 12px 20px; 
+            border: 2px solid #ff0000;
+            border-radius: 5px; 
+            cursor: pointer;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+            transition: 0.3s;
+        }
+
+        #music-control:hover {
+            background: #ff0000;
+            color: #000;
+            box-shadow: 0 0 20px #ff0000;
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="bg-music" loop>
+        <source src="bg-music.mp3" type="audio/mpeg">
+        ඔබේ Browser එක මගින් Audio සහය දක්වන්නේ නැත.
+    </audio>
+
+    <button id="music-control" onclick="toggleMusic()">🕵️ Activate Audio</button>
+
+    <iframe name="content-frame" id="content-frame" src="index.html"></iframe>
+
+    <script>
+        var music = document.getElementById("bg-music");
+        var btn = document.getElementById("music-control");
+
+        function toggleMusic() {
+            if (music.paused) {
+                music.play();
+                btn.innerHTML = "⏸ Pause Briefing";
+                btn.style.borderColor = "#00ff00"; // වැඩ කරන විට කොළ පැහැ වේ
+                btn.style.color = "#00ff00";
+            } else {
+                music.pause();
+                btn.innerHTML = "🕵️ Resume Briefing";
+                btn.style.borderColor = "#ff0000";
+                btn.style.color = "#ff0000";
+            }
+        }
+    </script>
+</body>
+</html>
