@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mystery of the Lost Golden Flame - Case Files</title>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle, #1a0000 0%, #050000 100%);
+            color: #d1d1d1;
+            line-height: 1.8;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 2px solid #4a0000;
+        }
+
+        nav a {
+            color: #888;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff0000;
+            text-shadow: 0 0 8px #ff0000;
+        }
+
+        /* Story Container */
+        .story-container {
+            padding: 120px 20px 80px;
+            max-width: 900px;
+            margin: auto;
+            animation: fadeIn 2s ease-in;
+            text-align: justify;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #ff0000;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+        }
+
+        .case-meta {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            color: #ff0000;
+            border-left: 4px solid #4a0000;
+            padding-left: 15px;
+            margin-top: 40px;
+            text-transform: uppercase;
+        }
+
+        .highlight {
+            color: #fff;
+            font-weight: bold;
+            background: rgba(74, 0, 0, 0.3);
+            padding: 2px 5px;
+        }
+
+        .clue-box {
+            background: rgba(20, 0, 0, 0.6);
+            border: 1px dashed #4a0000;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .clue-box b {
+            color: #ff0000;
+        }
+
+        .statement {
+            border-left: 2px solid #4a0000;
+            padding-left: 15px;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .conclusion {
+            border-top: 2px solid #4a0000;
+            margin-top: 50px;
+            padding-top: 20px;
+            font-style: italic;
+            color: #ccc;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 10px 25px;
+            border: 1px solid #ff0000;
+            color: #ff0000;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #ff0000;
+            color: #000;
+        }
+
+        .vignette {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle, transparent 50%, black 150%);
+            pointer-events: none;
+            z-index: 5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="vignette"></div>
+
+    <nav>
+        <a href="stories.html">← Back to Stories</a>
+    </nav>
+
+    <div class="story-container">
+        <h1>අතුරුදන් වූ රන් සිලුව</h1>
+        <div class="case-meta">File No: #DT-104 | Case Title: The Mystery of the Lost Golden Flame</div>
+
+        <p>
+            නුුවරඑළියේ මීදුමෙන් වැසුණු කඳුකර බැවුමක පිහිටි <span class="highlight">'මීදුම් මන්දිරය'</span> අතිශය අලංකාර මෙන්ම අද්භූත ස්වරූපයක් ගත් ස්ථානයකි. එහි හිමිකරු වූ සර් ජේම්ස් විජේසිංහ මහතා සතු වූ වටිනාම වස්තුව වූයේ ඓතිහාසික අගයකින් යුත් <span class="highlight">'රන් සිලුව'</span> නමැති පිළිමයයි. එහි දෑස් ලෙස තබා ඇති පද්මරාග මැණික් යුගළෙහි දීප්තිය නිසාම එයට මෙම නම ලැබී තිබුණි.
+        </p>
+
+        <p>
+            එක් සීතල මධ්‍යම රාත්‍රියක, දැඩි ආරක්ෂක විධිවිධාන සහ සංකීර්ණ ලේසර් කිරණ පද්ධති මැද තිබූ මෙම රන් පිළිමය අභිරහස් ලෙස අතුරුදන් විය. පොලිස් පරීක්ෂක සමන් සමඟ විශේෂ උපදේශක රහස් පරීක්ෂක සීලරත්න මහතා විමර්ශනය ආරම්භ කළේ කිසිදු අනතුරු ඇඟවීමේ සීනුවක් නාද නොවී මෙම සොරකම සිදු වූයේ කෙසේද යන්න පිළිබඳවයි.
+        </p>
+
+        <h3>අපරාධ ස්ථානයේ සූක්ෂ්ම නිරීක්ෂණ</h3>
+        <div class="clue-box">
+            <p><b>1. සුදු පැහැති කුඩු:</b> වීදුරු කුටිය අසල බිම සහ මේසයේ දාරයේ කුඩා සුදු පැහැති පවුඩර් වැනි කුඩු ස්වල්පයක් විසිරී තිබුණි. එහි මෘදු සුවඳක් තිබූ අතර එය මිනිස් ශරීරයට භාවිතා කරන ටැල්කම් පවුඩර්වලට සමාන විය.</p>
+            <p><b>2. තාක්ෂණික අංශ:</b> කාමරයේ ප්‍රධාන දොර ඇතුළතින් වසා තිබූ අතර, කිසිදු බලහත්කාරී ඇතුළුවීමක ලකුණක් නොතිබුණි. ආරක්ෂක පද්ධතියේ කිසිදු බිඳ වැටීමක් වාර්තා වී නොතිබුණි.</p>
+            <p><b>3. මල් පෝච්චියේ අබිරහස:</b> කාමරයේ කොනක තිබූ විශාල මැටි මල් පෝච්චියක් මදක් එහි මුල් පිහිටීමෙන් ඇලවී තිබුණි. එහි වූ තෙත පසෙහි යම් බරැති දෙයක් එබූ සලකුණක් දක්නට ලැබුණි.</p>
+        </div>
+
+        <h3>සැකකරුවන්ගේ සාක්ෂි විමසීම</h3>
+        <div class="statement"><b>මහේෂ් (ආරක්ෂක නිලධාරියා):</b> "මම මුළු රෑම දොර ළඟ හිටියා. කවුරුවත් කාමරයට ඇතුළු වුණේ නැහැ කියලා මම දිවුරලා කියනවා."</div>
+        <div class="statement"><b>සන්ධ්‍යා (සේවිකාව):</b> "මම රෑ 9 ට විතර සර්ට බෙහෙත් දීලා නිදාගත්තා. වැස්සේ සද්දෙට මට හොඳට නින්ද ගියා. කිසිම සද්දයක් ඇහුණේ නැහැ."</div>
+        <div class="statement"><b>රොෂාන් (බෑණනුවන්):</b> "මම මුළු රෑම මගේ කාමරේ පොතක් කියවමින් හිටියේ. සර්ගේ ආරක්ෂක පද්ධතිය ගැන මට දැනුමක් නැහැ."</div>
+
+        <h3>සීලරත්නගේ තියුණු නිගමනය</h3>
+        <p>
+            සීලරත්න මහතා එක්වරම ආරක්ෂක නිලධාරියා දෙස බලා තීක්ෂණ බැල්මක් හෙළීය. <span class="highlight">"සමන්, පිළිමය හොරකම් කළේ වෙන කවුරුත් නෙවෙයි, මේ මහේෂ් මයි!"</span>
+        </p>
+
+        <p>
+            "මහේෂ්, ඔබ ආරක්ෂක නිලධාරියෙක් විදියට සේවය කරන්න කලින් යුද හමුදාවේ ඉංජිනේරු අංශයේ හිටියා. ඔබ වීදුරුව කපන සද්දය වහන්න රේඩියෝ එකේ සද්දය හයියෙන් දැම්මා. වඩාත්ම වැදගත් සාක්ෂිය තමයි බිම වැටිලා තිබුණ සුදු කුඩු. ඒ ඔබේ සපත්තු ඇතුළේ දහඩියට සහ සුවඳට දාන <b>'ටැල්කම් පවුඩර්'</b>. දොර ළඟ ඉන්න ආරක්ෂකයෙක්ගේ සපත්තු අස්සේ තියෙන පවුඩර් කාමරය මැදට එන්න විදියක් නැහැ!"
+        </p>
+
+        <div class="conclusion">
+            ණය බරින් මිරිකී සිටි මහේෂ් පිළිමය මල් පෝච්චිය අස්සේ සඟවා පසුව එය සොරකම් කරගෙන යාමට සැලසුම් කර තිබුණි. සීලරත්න මහතාගේ තියුණු බුද්ධිය හමුවේ මිල කළ නොහැකි 'රන් සිලුව' නැවතත් එහි හිමිකරු සතු විය.
+        </div>
+
+        <a href="stories.html" class="back-btn">Back to Story Files</a>
+    </div>
+
+</body>
+</html>
