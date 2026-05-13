@@ -5,373 +5,168 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Case 04 - Fatal Live Stream</title>
     <style>
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        
-        body { 
-            font-family: 'Courier New', Courier, monospace; 
-            background: radial-gradient(circle, #1a0000 0%, #000000 100%); 
-            color: #d1d1d1; 
-            line-height: 1.6; 
-            margin: 0; 
-            padding: 0; 
-            scroll-behavior: smooth; 
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Navigation - Red Theme */
-        nav { 
-            background: rgba(0, 0, 0, 0.9); 
-            padding: 20px; 
-            display: flex; 
-            justify-content: center; 
-            border-bottom: 2px solid #ff0000; 
-            position: fixed; 
-            top: 0; width: 100%; z-index: 1000; 
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle, #1a0000 0%, #050000 100%);
+            color: #d1d1d1;
+            line-height: 1.6;
+            scroll-behavior: smooth;
         }
 
-        nav a { 
-            color: #ff0000; 
-            text-decoration: none; 
-            margin: 0 20px; 
-            font-weight: bold; 
-            text-transform: uppercase; 
-            letter-spacing: 2px; 
+        /* Navigation */
+        nav {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            border-bottom: 2px solid #4a0000;
+            position: fixed;
+            top: 0; width: 100%; z-index: 1000;
+        }
+
+        nav a {
+            color: #888;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             transition: 0.3s;
         }
 
-        nav a:hover { text-shadow: 0 0 10px #ff0000; }
+        nav a:hover { color: #ff0000; text-shadow: 0 0 5px #ff0000; }
 
         /* Container */
-        .container { 
-            max-width: 900px; 
-            margin: 120px auto 50px; 
-            padding: 20px; 
-            animation: fadeIn 1s ease-out; 
+        .container {
+            max-width: 800px;
+            margin: 120px auto 50px;
+            padding: 20px;
+            animation: fadeIn 1s ease-out;
         }
 
-        /* Header - Red Theme */
-        .case-header { 
-            text-align: center; 
-            border-bottom: 3px double #ff0000; 
-            padding-bottom: 20px; 
-            margin-bottom: 30px; 
+        .case-header {
+            text-align: center;
+            border-bottom: 3px double #4a0000;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
         }
 
-        .case-header h1 { 
-            color: #ff0000; 
-            font-size: 2.2rem; 
-            margin: 5px 0; 
-            letter-spacing: 3px; 
-            text-shadow: 0 0 10px #ff0000; 
+        .case-header h1 {
+            color: #ff0000;
+            font-size: 2.2rem;
+            margin: 0;
+            letter-spacing: 3px;
         }
 
-        .status-tag { 
-            color: #ff0000; 
-            border: 1px solid #ff0000; 
-            padding: 2px 10px; 
-            font-size: 0.8rem; 
-            display: inline-block; 
+        .status-tag {
+            color: #ff0000;
+            border: 1px solid #ff0000;
+            padding: 2px 10px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-top: 10px;
         }
 
-        /* Sections - Red Theme */
-        .section { 
-            background: rgba(40, 0, 0, 0.2); 
-            border-left: 4px solid #ff0000; 
-            padding: 20px; 
-            margin-bottom: 20px; 
-            border-radius: 0 10px 10px 0; 
+        /* Evidence Sections */
+        .section {
+            background: rgba(20, 0, 0, 0.6);
+            border-left: 4px solid #4a0000;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: 0.3s;
         }
 
-        .section h3 { 
-            color: #ff0000; 
-            text-transform: uppercase; 
-            border-bottom: 1px solid #440000; 
-            padding-bottom: 5px; 
+        .section h3 {
+            color: #ff0000;
+            margin-top: 0;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            border-bottom: 1px solid #330000;
+            padding-bottom: 5px;
         }
 
-        .clue-box { 
-            background: rgba(0,0,0,0.6); 
-            padding: 15px; 
-            border: 1px dashed #440000; 
-            margin-top: 10px; 
+        ul { list-style: square; padding-left: 20px; }
+        li { margin-bottom: 10px; }
+
+        .suspect-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 15px;
         }
 
-        .clue-box span { color: #ff0000; font-weight: bold; }
-
-        /* Suspects */
-        .suspect-grid { 
-            display: grid; 
-            grid-template-columns: 1fr 1fr 1fr; 
-            gap: 15px; 
-            margin-top: 15px; 
+        .suspect {
+            border: 1px solid #330000;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.3);
         }
 
-        .suspect-card { 
-            background: #050505; 
-            border: 1px solid #1a1a1a; 
-            padding: 15px; 
-            text-align: center; 
-            transition: 0.3s; 
+        .suspect span { color: #ff0000; font-weight: bold; }
+
+        /* Question & Reveal Styles */
+        .question-box {
+            background: #4a0000;
+            color: #fff;
+            padding: 25px;
+            text-align: center;
+            border-radius: 5px;
+            margin-top: 40px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
         }
 
-        .suspect-card:hover { border-color: #ff0000; transform: translateY(-5px); }
-        .suspect-card h4 { color: #ff0000; margin-top: 0; }
-
-        /* Question Box - Red Theme */
-        .question-box { 
-            background: #220000; 
-            color: #ff0000; 
-            padding: 25px; 
-            text-align: center; 
-            border: 1px solid #ff0000; 
-            margin: 40px 0; 
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.1);
+        .cta-button {
+            display: inline-block;
+            background-color: transparent;
+            color: #ff0000;
+            padding: 10px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid #ff0000;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: 0.4s;
+            margin-top: 30px;
         }
 
-        /* Buttons */
-        .reveal-btn { 
-            background: transparent; 
-            color: #ff0000; 
-            padding: 12px 40px; 
-            border: 2px solid #ff0000; 
-            text-transform: uppercase; 
-            font-weight: bold; 
-            cursor: pointer; 
-            transition: 0.4s; 
-            font-family: inherit;
+        .cta-button:hover {
+            background-color: #ff0000;
+            color: #000;
+            box-shadow: 0 0 20px #ff0000;
         }
-
-        .reveal-btn:hover { background: #ff0000; color: #000; box-shadow: 0 0 15px #ff0000; }
 
         .feedback-btn {
             background: transparent;
-            padding: 12px 25px;
+            padding: 10px 20px;
             cursor: pointer;
             font-family: inherit;
-            font-weight: bold;
-            text-transform: uppercase;
             transition: 0.3s;
-            margin: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-top: 10px;
         }
-        .feedback-btn:hover { transform: scale(1.05); }
+        .feedback-btn:hover { background: rgba(255, 255, 255, 0.1); transform: scale(1.05); }
 
         .back-btn {
             display: inline-block;
             margin-top: 30px;
-            color: #444;
+            color: #888;
             text-decoration: none;
+            font-size: 0.9rem;
         }
-        .back-btn:hover { color: #888; }
+        .back-btn:hover { color: #fff; }
 
-        /* solution section overrides - Green Theme */
-        #solutionSection .section {
-            background: rgba(0, 40, 0, 0.2);
-            border-left: 4px solid #00ff00;
+        @media (max-width: 600px) {
+            .suspect-box { grid-template-columns: 1fr; }
+            .case-header h1 { font-size: 1.6rem; }
         }
-        #solutionSection h3, #solutionSection strong {
-            color: #00ff00;
-        }
-        #solutionSection ul li::marker {
-            color: #00ff00;
-        }
-
-        @media (max-width: 768px) { .suspect-grid { grid-template-columns: 1fr; } }
-    </style>
-</head>
-<body>
-
-    <center><nav>
-        <a href="index.html">Home</a>
-        <a href="cases.html">Cases</a>
-        <a href="yi.html">Your Ideas</a>
-    </nav></center>
-
-    <div class="container">
-        <div class="case-header">
-            <span class="status-tag">TECH-CRIME FILE #004</span>
-            <h1>මාරාන්තික සජීවී විකාශය</h1>
-            <p>"Galle Express" Luxury Bus | 2:17 AM | කඩුගන්නාව</p>
-        </div>
-
-        <div class="section">
-            <h3>සිදුවීම (The Incident)</h3>
-            <p>ප්‍රකට YouTuber <strong>සුරේෂ් මෙන්ඩිස්```html
-<!DOCTYPE html>
-<html lang="si">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case 04 - Fatal Live Stream</title>
-    <style>
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        
-        body { 
-            font-family: 'Courier New', Courier, monospace; 
-            background: radial-gradient(circle, #1a0000 0%, #000000 100%); 
-            color: #d1d1d1; 
-            line-height: 1.6; 
-            margin: 0; 
-            padding: 0; 
-            scroll-behavior: smooth; 
-        }
-
-        /* Navigation - Red Theme */
-        nav { 
-            background: rgba(0, 0, 0, 0.9); 
-            padding: 20px; 
-            display: flex; 
-            justify-content: center; 
-            border-bottom: 2px solid #ff0000; 
-            position: fixed; 
-            top: 0; width: 100%; z-index: 1000; 
-        }
-
-        nav a { 
-            color: #ff0000; 
-            text-decoration: none; 
-            margin: 0 20px; 
-            font-weight: bold; 
-            text-transform: uppercase; 
-            letter-spacing: 2px; 
-            transition: 0.3s;
-        }
-
-        nav a:hover { text-shadow: 0 0 10px #ff0000; }
-
-        /* Container */
-        .container { 
-            max-width: 900px; 
-            margin: 120px auto 50px; 
-            padding: 20px; 
-            animation: fadeIn 1s ease-out; 
-        }
-
-        /* Header - Red Theme */
-        .case-header { 
-            text-align: center; 
-            border-bottom: 3px double #ff0000; 
-            padding-bottom: 20px; 
-            margin-bottom: 30px; 
-        }
-
-        .case-header h1 { 
-            color: #ff0000; 
-            font-size: 2.2rem; 
-            margin: 5px 0; 
-            letter-spacing: 3px; 
-            text-shadow: 0 0 10px #ff0000; 
-        }
-
-        .status-tag { 
-            color: #ff0000; 
-            border: 1px solid #ff0000; 
-            padding: 2px 10px; 
-            font-size: 0.8rem; 
-            display: inline-block; 
-        }
-
-        /* Sections - Red Theme */
-        .section { 
-            background: rgba(40, 0, 0, 0.2); 
-            border-left: 4px solid #ff0000; 
-            padding: 20px; 
-            margin-bottom: 20px; 
-            border-radius: 0 10px 10px 0; 
-        }
-
-        .section h3 { 
-            color: #ff0000; 
-            text-transform: uppercase; 
-            border-bottom: 1px solid #440000; 
-            padding-bottom: 5px; 
-        }
-
-        .clue-box { 
-            background: rgba(0,0,0,0.6); 
-            padding: 15px; 
-            border: 1px dashed #440000; 
-            margin-top: 10px; 
-        }
-
-        .clue-box span { color: #ff0000; font-weight: bold; }
-
-        /* Suspects */
-        .suspect-grid { 
-            display: grid; 
-            grid-template-columns: 1fr 1fr 1fr; 
-            gap: 15px; 
-            margin-top: 15px; 
-        }
-
-        .suspect-card { 
-            background: #050505; 
-            border: 1px solid #1a1a1a; 
-            padding: 15px; 
-            text-align: center; 
-            transition: 0.3s; 
-        }
-
-        .suspect-card:hover { border-color: #ff0000; transform: translateY(-5px); }
-        .suspect-card h4 { color: #ff0000; margin-top: 0; }
-
-        /* Question Box - Red Theme */
-        .question-box { 
-            background: #220000; 
-            color: #ff0000; 
-            padding: 25px; 
-            text-align: center; 
-            border: 1px solid #ff0000; 
-            margin: 40px 0; 
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.1);
-        }
-
-        /* Buttons */
-        .reveal-btn { 
-            background: transparent; 
-            color: #ff0000; 
-            padding: 12px 40px; 
-            border: 2px solid #ff0000; 
-            text-transform: uppercase; 
-            font-weight: bold; 
-            cursor: pointer; 
-            transition: 0.4s; 
-            font-family: inherit;
-        }
-
-        .reveal-btn:hover { background: #ff0000; color: #000; box-shadow: 0 0 15px #ff0000; }
-
-        .feedback-btn {
-            background: transparent;
-            padding: 12px 25px;
-            cursor: pointer;
-            font-family: inherit;
-            font-weight: bold;
-            text-transform: uppercase;
-            transition: 0.3s;
-            margin: 5px;
-        }
-        .feedback-btn:hover { transform: scale(1.05); }
-
-        .back-btn {
-            display: inline-block;
-            margin-top: 30px;
-            color: #444;
-            text-decoration: none;
-        }
-        .back-btn:hover { color: #888; }
-
-        /* solution section overrides - Green Theme */
-        #solutionSection .section {
-            background: rgba(0, 40, 0, 0.2);
-            border-left: 4px solid #00ff00;
-        }
-        #solutionSection h3, #solutionSection strong {
-            color: #00ff00;
-        }
-        #solutionSection ul li::marker {
-            color: #00ff00;
-        }
-
-        @media (max-width: 768px) { .suspect-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -386,7 +181,7 @@
         <div class="case-header">
             <span class="status-tag">TECH-CRIME FILE #004</span>
             <h1>මාරාන්තික සජීවී විකාශය</h1>
-            <p>"Galle Express" Luxury Bus | 2:17 AM | කඩුගන්නාව</p>
+            <p>ස්ථානය: "Galle Express" Luxury Bus | වේලාව: පාන්දර 2:17</p>
         </div>
 
         <div class="section">
@@ -395,35 +190,26 @@
         </div>
 
         <div class="section">
-            <h3>විමර්ශන දත්ත (Investigation Data)</h3>
-            <div class="clue-box">
-                <span>1. කාලය:</span> රෑ 2:15 ට විදුලිය ඇනහිටි අතර මරණය 2:16 - 2:18 අතර අඳුරේ සිදුවී ඇත.
-            </div>
-            <div class="clue-box">
-                <span>2. Locked Room:</span> දොර ඇතුළතින් Auto-Lock වී තිබුණි. ජනේල සියල්ල වසා තිබුණි. තුවක්කුව හමුවී නැත.
-            </div>
-            <div class="clue-box">
-                <span>3. ශ්‍රව්‍ය සාක්ෂි:</span> TikTok Live එකේ දොර ලොක් වන "Tic" හඬ දෙවරක් ඇසේ. සුරේෂ්ගේ අවසන් වදන: "U killed my..."
-            </div>
-            <div class="clue-box">
-                <span>4. සලකුණු:</span> බිම මඩ සහිත සපත්තු සලකුණු දෙකක් තිබුණි (ප්‍රමාණය 7 සහ 9).
-            </div>
+            <h3>සාක්ෂි (Evidence)</h3>
+            <ul>
+                <li><strong>කාලය:</strong> පාන්දර 2:15 ට විදුලිය ඇනහිටි අතර මරණය 2:16 - 2:18 අතර සිදුවී ඇත.</li>
+                <li><strong>දොර:</strong> ඇතුළතින් Auto-Lock වී තිබුණි. ජනේල සියල්ල වසා තිබුණි. තුවක්කුව හමුවී නැත.</li>
+                <li><strong>ශ්‍රව්‍ය සාක්ෂි:</strong> Live එකේ දොර ලොක් වන "Tic" හඬ දෙවරක් ඇසේ. සුරේෂ්ගේ අවසන් වදන: "U killed my..."</li>
+                <li><strong>සලකුණු:</strong> බිම මඩ සහිත සපත්තු සලකුණු දෙකක් තිබුණි (ප්‍රමාණය 7 සහ 9).</li>
+            </ul>
         </div>
 
         <div class="section">
-            <h3>සැකකරුවන් (The Suspects)</h3>
-            <div class="suspect-grid">
-                <div class="suspect-card">
-                    <h4>තනුජා</h4>
-                    <p>Manager<br>ප්‍රමාණය: 7<br>පැවසුවේ රියදුරු සොයා ගිය බවයි.</p>
+            <h3>සැකකරුවන් (Suspects)</h3>
+            <div class="suspect-box">
+                <div class="suspect">
+                    <span>1. තනුජා (Manager):</span> සපත්තු ප්‍රමාණය 7. රියදුරු සොයා ගිය බව පවසයි.
                 </div>
-                <div class="suspect-card">
-                    <h4>රාජිව්</h4>
-                    <p>Tech Competitor<br>ප්‍රමාණය: 9<br>පැවසුවේ නිදා සිටි බවයි.</p>
+                <div class="suspect">
+                    <span>2. රාජිව් (Tech Competitor):</span> සපත්තු ප්‍රමාණය 9. නිදා සිටි බව පවසයි.
                 </div>
-                <div class="suspect-card">
-                    <h4>චමින්ද</h4>
-                    <p>Bus Driver<br>ප්‍රමාණය: 9<br>පැවසුවේ එන්ජිම පරීක්ෂා කළ බවයි.</p>
+                <div class="suspect">
+                    <span>3. චමින්ද (Bus Driver):</span> සපත්තු ප්‍රමාණය 9. එන්ජිම පරීක්ෂා කළ බව පවසයි.
                 </div>
             </div>
         </div>
@@ -433,58 +219,53 @@
         </div>
 
         <center>
-            <button class="reveal-btn" onclick="revealSolution()" id="revealBtn">Execute Recovery Protocol (Reveal Solution)</button>
+            <button class="cta-button" onclick="revealSolution()" id="revealBtn">Reveal Investigation Analysis</button>
         </center>
 
         <div id="solutionSection" style="display: none; margin-top: 50px; animation: fadeIn 1.5s ease-in;">
-            <div class="section">
-                <h3>පද්ධති විශ්ලේෂණය (Solution)</h3>
+            <div class="section" style="border-color: #00ff00; background: rgba(0, 20, 0, 0.4);">
+                <h3 style="color: #00ff00;">විමර්ශන වාර්තාව (Analysis Result)</h3>
                 <p><strong>මිනීමරුවා:</strong> රාජිව් (TechKing LK)</p>
+                <p><strong>විමර්ශන නිරීක්ෂණ:</strong></p>
                 <ul>
                     <li><strong>තාක්ෂණික ප්‍රහාරය:</strong> රාජිව් බස් රථයේ Smart Door පද්ධතිය Hack කර විදුලිය නැති මොහොතේ දොර විවෘත කරගෙන ඇත.</li>
-                    <li><strong>තුවක්කුව:</strong> ඔහු තුවක්කුව VIP Lounge එකේ තිබූ <strong>Mini Fridge</strong> එකේ පිටුපස සඟවා තිබුණි.</li>
-                    <li><strong>අවසන් වදන:</strong> "U killed my <strong>Channel</strong>!" (රාජිව්ගේ වංචා එළිදරව් කිරීමෙන් ඔහුගේ චැනලය නැති වන නිසා).</li>
+                    <li><strong>තුවක්කුව:</strong> ඔහු තුවක්කුව VIP Lounge එකේ තිබූ Mini Fridge එකේ පිටුපස සඟවා තිබුණි.</li>
+                    <li><strong>අවසන් වදන:</strong> "U killed my Channel!" (රාජිව්ගේ වංචා එළිදරව් කිරීමෙන් ඔහුගේ චැනලය නැති වන නිසා).</li>
+                    <li><strong>සපත්තු සලකුණ:</strong> බිම තිබූ ප්‍රමාණය 9 සපත්තු සලකුණ ඔහුට අයත් වේ.</li>
                 </ul>
             </div>
 
-            <div id="feedbackArea" style="margin-top: 30px; padding: 20px; border: 1px solid #00ff00; text-align: center; background: rgba(0, 20, 0, 0.5);">
-                <p style="color: #00ff00; font-family: inherit; font-weight: bold;">ඔබ මෙම විමර්ශනය නිවැරදිව නිම කළාද?</p>
-                <div id="feedbackButtons">
-                    <button class="feedback-btn" onclick="showFeedback('yes')" style="border: 1px solid #00ff00; color: #00ff00;">ඔව්, මම නිවැරදියි! 🎯</button>
-                    <button class="feedback-btn" onclick="showFeedback('no')" style="border: 1px solid #ff4444; color: #ff4444;">නැහැ, මට වැරදුණා.. 🤔</button>
-                </div>
-                <div id="resultMessage" style="display: none; margin-top: 20px; padding: 15px; border-radius: 5px; animation: fadeIn 0.8s; border: 1px solid #00ff00; background: rgba(0, 255, 0, 0.05);">
-                    <h4 id="resTitle" style="margin: 0; color: #00ff00;">🎯 විශිෂ්ටයි, රහස් පරීක්ෂකතුමනි!</h4>
-                    <p id="resDesc" style="margin-top: 10px; color: #d1d1d1;"></p>
-                </div>
+            <div style="margin-top: 30px; padding: 20px; border: 1px solid #333; text-align: center;">
+                <p style="color: #888;">ඔබ මෙම අභිරහස නිවැරදිව විසඳුවාද?</p>
+                <button class="feedback-btn" onclick="feedback('yes')" style="border: 1px solid #00ff00; color: #00ff00;">ඔව්, මම නිවැරදියි! 🕵️</button>
+                <button class="feedback-btn" onclick="feedback('no')" style="border: 1px solid #ff0000; color: #ff0000; margin-left: 10px;">තවම හිතනවා.. 🤔</button>
             </div>
         </div>
 
         <center>
-            <a href="cases.html" class="back-btn">← Back to System Files</a>
+            <p style="margin-top: 40px; color: #666;">ඔබේ අදහස් "Your Ideas" පිටුව හරහා අපට එවන්න.</p>
+            <a href="cases.html" class="back-btn">← Back to Evidence Files</a>
         </center>
     </div>
 
     <script>
         function revealSolution() {
-            document.getElementById("solutionSection").style.display = "block";
-            document.getElementById("solutionSection").scrollIntoView({ behavior: 'smooth' });
-            document.getElementById("revealBtn").style.display = "none";
+            var solution = document.getElementById("solutionSection");
+            var btn = document.getElementById("revealBtn");
+            
+            solution.style.display = "block";
+            solution.scrollIntoView({ behavior: 'smooth' });
+            btn.style.display = "none";
         }
 
-        function showFeedback(type) {
-            document.getElementById("feedbackButtons").style.display = "none";
-            const msg = document.getElementById("resultMessage");
-            const resDesc = document.getElementById("resDesc");
-            msg.style.display = "block";
-
+        function feedback(type) {
             if(type === 'yes') {
-                resDesc.innerText = "ඔබේ තර්කනය ඉතා ඉහළ මට්ටමක පවතිනවා. පද්ධතිය සාර්ථකව යථා තත්ත්වයට පත් කරන ලදී.";
+                alert("නියමයි! ඔබ දක්ෂ රහස් පරීක්ෂකයෙක්. 🔍");
             } else {
-                // If wrong, we keep green box but change text to encourage retry
-                resDesc.innerText = "කමක් නැහැ, නැවත වරක් සාක්ෂි පරීක්ෂා කර තර්කනය ගොඩනගන්න උත්සාහ කරන්න.";
+                alert("කමක් නැහැ, ඊළඟ Case එක විසඳන්න උත්සාහ කරමු! 💪");
             }
         }
     </script>
+
 </body>
-</html>```
+</html>
