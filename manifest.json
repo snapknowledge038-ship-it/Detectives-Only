@@ -1,0 +1,15 @@
+{
+  "name": "Detectives Only: Case Files",
+  "short_name": "Detectives",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#ff0000",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/1022/1022313.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
