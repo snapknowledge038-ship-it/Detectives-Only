@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Deadly Mystery of the Haunted Painting - Deep Investigation</title>
+    <style>
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes fogMove { 0% { background-position: 0% 0%; } 100% { background-position: 100% 100%; } }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background: #050000;
+            color: #d1d1d1;
+            line-height: 1.9;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: rgba(0, 0, 0, 0.95);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 2px solid #4a0000;
+        }
+
+        nav a {
+            color: #aaa;
+            text-decoration: none;
+            margin: 0 25px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        nav a:hover { color: #ff0000; text-shadow: 0 0 10px #ff0000; }
+
+        /* Content Area */
+        .story-container {
+            padding: 150px 30px 100px;
+            max-width: 1100px;
+            margin: auto;
+            animation: fadeIn 2.5s ease-in;
+            background: linear-gradient(to bottom, rgba(20,0,0,0.8), rgba(0,0,0,0.9));
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #ff0000;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 7px;
+            margin-bottom: 5px;
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+        }
+
+        .case-meta {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #777;
+            margin-bottom: 60px;
+            font-style: italic;
+        }
+
+        h3 {
+            color: #ff4d4d;
+            border-left: 6px solid #ff0000;
+            padding-left: 20px;
+            margin-top: 60px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .highlight {
+            color: #fff;
+            background: rgba(139, 0, 0, 0.4);
+            padding: 3px 10px;
+            border-bottom: 1px solid #ff0000;
+        }
+
+        .clue-box {
+            background: #0f0000;
+            border: 1px solid #330000;
+            padding: 40px;
+            margin: 40px 0;
+            position: relative;
+            box-shadow: 0 0 30px rgba(0,0,0,1);
+        }
+
+        .clue-box::before {
+            content: "EVIDENCE LOG";
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: #ff0000;
+            color: #000;
+            padding: 2px 15px;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+
+        .clue-box b { color: #ff0000; font-size: 1.2rem; display: block; margin-top: 15px; }
+
+        .statement-section {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .card {
+            background: rgba(15, 15, 15, 0.8);
+            border: 1px solid #222;
+            padding: 30px;
+            border-left: 5px solid #444;
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            border-left-color: #ff0000;
+            background: rgba(30, 0, 0, 0.5);
+        }
+
+        .card-name {
+            font-weight: bold;
+            color: #ff0000;
+            margin-bottom: 10px;
+            display: block;
+            text-transform: uppercase;
+        }
+
+        .conclusion-block {
+            background: #1a0000;
+            border: 2px solid #ff0000;
+            padding: 50px;
+            margin-top: 80px;
+            box-shadow: 0 0 50px rgba(255, 0, 0, 0.2);
+        }
+
+        .conclusion-block p {
+            font-size: 1.1rem;
+            color: #f1f1f1;
+        }
+
+        .back-btn {
+            display: table;
+            margin: 60px auto;
+            padding: 18px 40px;
+            border: 2px solid #ff0000;
+            color: #ff0000;
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 3px;
+            transition: 0.5s;
+        }
+
+        .back-btn:hover {
+            background: #ff0000;
+            color: #000;
+            box-shadow: 0 0 30px #ff0000;
+        }
+
+        .vignette {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle, transparent 30%, black 140%);
+            pointer-events: none;
+            z-index: 5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="vignette"></div>
+
+    <nav>
+        <a href="stories.html">← CASE ARCHIVES</a>
+    </nav>
+
+    <div class="story-container">
+        <h1>අද්භූත සිතුවමේ මාරාන්තික රහස</h1>
+        <div class="case-meta">Case File: #SC-709-DEEP | Investigator: Detective Seelaratne</div>
+
+        <p>
+            නුවරඑළියේ 'වික්ටෝරියානු කලාගාරය' දශක ගණනාවක සිට අඳුරු රහස් සඟවා ගත් මන්දිරයකි. එහි ඇති වටිනාම වස්තුව වූයේ <span class="highlight">'ලේඩී ඉසබෙලා'</span> නමැති අද්භූත සිතුවමයි. මෙම සිතුවමේ සිටින කාන්තාවගේ දෑස් බලන්නා කොතැනක සිටියත් ඔහු සමඟ ගමන් කරන බවටත්, ඇතැම් පෝය රාත්‍රීන්වල ඇය සිතුවමෙන් එළියට පැමිණ සුදු ඇඳුමකින් සැරසී කොරිඩෝව දිගේ පාවෙමින් ඇවිද යන බවටත් වතුකරයේ බියකරු ජනප්‍රවාද පැතිර තිබුණි. 
+        </p>
+
+        <p>
+            එක් අඳුරු රාත්‍රියක, කලාගාරයේ ප්‍රධාන ආරක්ෂක නිලධාරියා අභිරහස් ලෙස මියගොස් සිටියදී හමු විය. ඔහුගේ මුහුණේ තිබුණේ කිසිවකුටත් හසු නොවන අද්භූත බලවේගයක් දුටු ලෙස දරුණු බියක සලකුණුය. එම අවස්ථාවේදීම 'ලේඩී ඉසබෙලා' සිතුවම ද එහි රාමුවෙන් වෙන් කර අතුරුදන් වී තිබුණි. "මහත්තයා, ඒ රූපය සිතුවමෙන් එළියට ඇවිත් ආරක්ෂකයාට දඬුවම් කරලා!" යනුවෙන් භාරකරු වෙව්ලන හඬින් පැවසීය.
+        </p>
+
+        <h3>අපරාධ ස්ථානයේ රහස් සලකුණු (Forensic Analysis)</h3>
+        <div class="clue-box">
+            <b>1. රසායනික කුඩු සහ දෘෂ්‍ය මායාවන්:</b>
+            <p>සිතුවම තිබූ ස්ථානය අසල බිම සුදු පැහැති සියුම් කුඩු වර්ගයක් විසිරී තිබුණි. සීලරත්න මහතා එය පරීක්ෂා කිරීමේදී හෙළි වූයේ එය ලේසර් කිරණ පාලනය කිරීමට සහ හොලෝග්‍රෑම් රූප වල පැහැදිලි බව වැඩි කිරීමට භාවිතා කරන විශේෂිත මැග්නීසියම් මිශ්‍රිත කුඩු වර්ගයක් බවයි. භූතයෙකුගේ පියවරක් ලෙස පෙනුන ද, එය සූක්ෂ්ම ලෙස පියවර තැබූ මිනිසෙකුගේ සලකුණකි.</p>
+
+            <b>2. මාරාන්තික රසායනික වායුව:</b>
+            <p>ආරක්ෂකයා මියගොස් සිටි ස්ථානය අවට තියුණු එහෙත් මිහිරි ගන්ධයක් රැඳී තිබුණි. සීලරත්න මහතා නිගමනය කළේ එය මධ්‍යම ස්නායු පද්ධතිය අකර්මන්‍ය කරන 'සෙවොෆ්ලුරේන්' (Sevoflurane) නමැති ප්‍රබල වායුව බවයි. ආරක්ෂකයා මියගොස් තිබුණේ බිය නිසා නොව, වායුසමීකරණ පද්ධතිය හරහා එවන ලද මෙම වායුව අධික ලෙස ආශ්වාස කිරීම නිසා හුස්ම හිරවීමෙනි.</p>
+
+            <b>3. ක්ෂුද්‍ර තාක්ෂණික සාක්ෂි:</b>
+            <p>හිස් රාමුව අසල බිම වැටී තිබූ ඉතා කුඩා, රිදී පැහැති කම්බි කැබැල්ලක් සහ ක්ෂුද්‍ර පරිපථ කොටසක් හමු විය. එය නූතන ත්‍රිමාණ රූප මවන හොලෝග්‍රෑම් ප්‍රොජෙක්ටරයකට අයත් කොටසක් බව සීලරත්න වහාම හඳුනා ගත්තේය. බිත්තියේ තිබූ රහසිගත සිදුරු හරහා මෙම රූප පාලනය කර ඇති බව පෙනී ගියේය.</p>
+        </div>
+
+        <h3>සැකකරුවන්ගේ සාක්ෂි (The Interrogation)</h3>
+        <div class="statement-section">
+            <div class="card">
+                <span class="card-name">ධර්මපාල (කලාගාරයේ භාරකරු)</span>
+                "මම රෑ 12 ට කොරිඩෝවේ යනකොට සුදු පාට රූපයක් සිතුවමෙන් එළියට එනවා දැක්කා. ඒක දැක්ක ගමන් මම බය වෙලා මගේ කාමරයට දුවලා ගිහින් දොර වහගත්තා. මම තාමත් ඉන්නේ දරුණු කම්පනයකින්."
+            </div>
+            <div class="card">
+                <span class="card-name">මාලිනී (සිතුවම් ප්‍රතිසංස්කරණය කරන්නිය)</span>
+                "මම ඊයේ රෑ පරණ සිතුවම් කිහිපයක් රසායනික ද්‍රව්‍ය පාවිච්චි කරලා පිරිසිදු කරමින් හිටියේ. මම ඒ සිතුවම අල්ලන්නවත් ගියේ නැහැ. මම සොරකම ගැන මුකුත් දන්නේ නැහැ."
+            </div>
+            <div class="card">
+                <span class="card-name">විජේ (ප්‍රදර්ශන සංවිධායක)</span>
+                "මම ඊයේ රෑ සාදය ඉවර වෙලා ගොඩක් රෑ වෙලා තමයි නිදාගන්න ගියේ. ඔය කියන භූත කතා මම විශ්වාස කරන්නේ නැහැ. මට මේ ප්‍රදර්ශනය සාර්ථක කරගන්න එකයි වැදගත්." (විජේගේ සාක්කුවෙන් කුඩා දුරස්ථ පාලකයක් මදක් එළියට නෙරා තිබුණි).
+            </div>
+        </div>
+
+        <h3>සීලරත්නගේ විස්මිත හෙළිදරව්ව (The Unmasking)</h3>
+        <p>
+            සීලරත්න මහතා සන්සුන්ව විජේ දෙසට හැරී මෙසේ පැවසීය. "විජේ, ඔබ කළු වෙළඳපොලේ සිතුවම් විකුණන ජාවාරම්කරුවෙක් බව මම සොයාගත්තා. ඔබ මිනිසුන්ගේ හදවත් තුළ තියෙන බිය ඉතාමත් ම්ලේච්ඡ විදියට පාවිච්චි කළා. ඔබ අධි බලැති හොලෝග්‍රෑම් ප්‍රොජෙක්ටර් තාක්ෂණය පාවිච්චි කරලා කොරිඩෝව මැද 'ලේඩී ඉසබෙලා' සජීවීව ඇවිදින රූපයක් මැව්වා. ගම්වාසීන් සහ භාරකරු දුටුවේ ඔබ ඩිජිටල් ලෙස නිර්මාණය කළ මායාවක්."
+        </p>
+
+        <p>
+            "ආරක්ෂකයා මියගියේ භූතයෙක් දැකලා නෙවෙයි. ඔබ මාලිනීගේ රසායනාගාරයෙන් සොරකම් කළ රසායනික වායුව වායුසමීකරණ පද්ධතිය හරහා මුදා හැරියා. ඔහු බියෙන් සිහි නැතිව වැටුණු පසු ඔහුට එම වායුව අධික මාත්‍රාවකින් ලබා දී ඔහුව නිහඬවම ඝාතනය කළා. ඔබේ සාක්කුවේ තියෙන රිමෝට් එක තමයි ඒ සියල්ල පාලනය කළේ!"
+        </p>
+
+        <div class="conclusion-block">
+            <h3>සාධාරණය ඉටු වීම</h3>
+            <p>
+                සීලරත්න මහතා විජේගේ සාක්කුවේ තිබූ රිමෝට් එක මගින් මන්දිරයේ පැරණි වායුසමීකරණ බටයක් (AC Duct) විවෘත කළේය. එහි ප්ලාස්ටික් බටයක් ඇතුළේ සූක්ෂ්ම ලෙස රෝල් කර සඟවා තිබූ 'ලේඩී ඉසබෙලා' සිතුවම හමු විය. විජේ සිය වරද පිළිගත් අතර, භූත බලවේග සහ අද්භූත මිත්‍යාවන් හරහා සිදු කිරීමට ගිය භයානක අපරාධ ජාලයක් සීලරත්න මහතා විසින් සිය බුද්ධි මහිමයෙන් සහ තාර්කිකත්වය මගින් හෙළිදරව් කරන ලදී.
+            </p>
+        </div>
+
+        <a href="stories.html" class="back-btn">RETURN TO ARCHIVES</a>
+    </div>
+
+</body>
+</html>
