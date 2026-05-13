@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detectives Only - Case Stories</title>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle, #1a0000 0%, #050000 100%);
+            color: #d1d1d1;
+            text-align: center;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 2px solid #4a0000;
+        }
+
+        nav a {
+            color: #888;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav a:hover, nav a.active {
+            color: #ff0000;
+            text-shadow: 0 0 8px #ff0000;
+        }
+
+        /* Container */
+        .container {
+            padding: 120px 20px 50px;
+            max-width: 800px;
+            margin: auto;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #ff0000;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #4a0000;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        /* Story List Styling */
+        .story-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .story-item {
+            background: rgba(20, 0, 0, 0.6);
+            border: 1px solid #4a0000;
+            padding: 20px;
+            text-decoration: none;
+            color: #aaa;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Story Archive Stamp */
+        .story-item::before {
+            content: "ARCHIVE";
+            position: absolute;
+            right: -20px;
+            top: 10px;
+            background: #4a0000;
+            color: #000;
+            font-size: 0.7rem;
+            padding: 2px 30px;
+            transform: rotate(45deg);
+            opacity: 0.3;
+        }
+
+        .story-item:hover {
+            border-color: #ff0000;
+            color: #fff;
+            box-shadow: inset 0 0 15px rgba(255, 0, 0, 0.2);
+            transform: scale(1.02);
+        }
+
+        .story-item span {
+            color: #ff0000;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        /* Vignette Effect */
+        .vignette {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle, transparent 50%, black 150%);
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        @media (max-width: 600px) {
+            h2 { font-size: 1.8rem; }
+            .story-item { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="vignette"></div>
+
+    <nav>
+        <div style="display: flex;">
+            <a href="index.html" target="content-frame">Home</a>
+            <a href="cases.html" target="content-frame">Cases</a>
+            <a href="stories.html" target="content-frame" class="active">Stories</a>
+            <a href="yi.html" target="content-frame">Your Ideas</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Detective Stories</h2>
+        <p>අභිරහස් සහ අපරාධ විද්‍යාව පිළිබඳ ලියැවුණු විශේෂ කතා පෙළ කියවන්න. තේමාවක් තෝරාගන්න.</p>
+
+        <div class="story-list">
+            
+            <a href="story1.html" class="story-item">
+                01. මීදුම් නිම්නයේ දඩයක්කාරයෝ (Hunters of the Mist Valley)
+                <span>Read Story</span>
+            </a>
+
+            <a href="story2.html" class="story-item">
+                02. අතුරුදහන් වූ සාක්ෂිය (The Missing Clue)
+                <span>Read Story</span>
+            </a>
+
+            <a href="story3.html" class="story-item">
+                03. පක්ෂි කුළුණේ අබිරහස (The Bird Tower Mystery)
+                <span>Read Story</span>
+            </a>
+
+            <a href="story4.html" class="story-item">
+                04. රහස් පරීක්ෂකයාගේ දිනපොත (The Detective's Diary)
+                <span>New</span>
+            </a>
+
+        </div>
+    </div>
+
+</body>
+</html>
