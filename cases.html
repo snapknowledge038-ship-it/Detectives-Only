@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detectives Only - Crime Files</title>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle, #1a0000 0%, #050000 100%);
+            color: #d1d1d1;
+            text-align: center;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 2px solid #4a0000;
+        }
+
+        nav a {
+            color: #888;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav a:hover, nav a.active {
+            color: #ff0000;
+            text-shadow: 0 0 8px #ff0000;
+        }
+
+        /* Container */
+        .container {
+            padding: 120px 20px 50px;
+            max-width: 800px;
+            margin: auto;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #ff0000;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #4a0000;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        /* Case List Styling */
+        .case-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .case-item {
+            background: rgba(20, 0, 0, 0.6);
+            border: 1px solid #4a0000;
+            padding: 20px;
+            text-decoration: none;
+            color: #aaa;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .case-item::before {
+            content: "TOP SECRET";
+            position: absolute;
+            right: -20px;
+            top: 10px;
+            background: #4a0000;
+            color: #000;
+            font-size: 0.7rem;
+            padding: 2px 30px;
+            transform: rotate(45deg);
+            opacity: 0.3;
+        }
+
+        .case-item:hover {
+            border-color: #ff0000;
+            color: #fff;
+            box-shadow: inset 0 0 15px rgba(255, 0, 0, 0.2);
+            transform: scale(1.02);
+        }
+
+        .case-item span {
+            color: #ff0000;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        /* Vignette Effect */
+        .vignette {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle, transparent 50%, black 150%);
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        @media (max-width: 600px) {
+            h2 { font-size: 1.8rem; }
+            .case-item { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="vignette"></div>
+
+    <nav>
+        <div style="display: flex;">
+            <a href="index.html">Home</a>
+            <a href="cases.html" class="active">Cases</a>
+            <a href="yi.html">Your Ideas</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Evidence Files</h2>
+        <p>විසඳීමට ඇති අපරාධ වාර්තා පරීක්ෂා කරන්න. එකක් තෝරාගෙන පරීක්ෂණය ආරම්භ කරන්න.</p>
+
+        <div class="case-list">
+            <a href="case1.html" class="case-item">
+                01. අතුරුදහන් වූ සාක්ෂිකරු (The Missing Witness)
+                <span>Status: Open</span>
+            </a>
+
+            <a href="case2.html" class="case-item">
+                02. මීදුම් නිම්නයේ අභිරහස (Mystery of Mist Valley)
+                <span>Status: Open</span>
+            </a>
+
+            <a href="case3.html" class="case-item">
+                03. මියගිය මිනිසාගේ පණිවිඩය (Dead Man's Message)
+                <span>Status: Hard</span>
+            </a>
+
+            <a href="case4.html" class="case-item">
+                04. රාත්‍රී දුම්රියේ අපරාධය (Midnight Express Crime)
+                <span>Status: Open</span>
+            </a>
+
+            </div>
+    </div>
+
+</body>
+</html>
