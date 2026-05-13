@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case 02 - සලකුණු කළ හෝරාව (The Marked Hour)</title>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle, #1a0000 0%, #050000 100%);
+            color: #d1d1d1;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            border-bottom: 2px solid #4a0000;
+            position: fixed;
+            top: 0; width: 100%; z-index: 1000;
+        }
+
+        nav a {
+            color: #888;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        nav a:hover { color: #ff0000; text-shadow: 0 0 5px #ff0000; }
+
+        /* Container */
+        .container {
+            max-width: 800px;
+            margin: 120px auto 50px;
+            padding: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .case-header {
+            text-align: center;
+            border-bottom: 3px double #4a0000;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .case-header h1 {
+            color: #ff0000;
+            font-size: 2.2rem;
+            margin: 0;
+            letter-spacing: 3px;
+        }
+
+        .status-tag {
+            color: #ff0000;
+            border: 1px solid #ff0000;
+            padding: 2px 10px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        /* Evidence Sections */
+        .section {
+            background: rgba(20, 0, 0, 0.6);
+            border-left: 4px solid #4a0000;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .section h3 {
+            color: #ff0000;
+            margin-top: 0;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            border-bottom: 1px solid #330000;
+            padding-bottom: 5px;
+        }
+
+        ul { list-style: square; padding-left: 20px; }
+        li { margin-bottom: 10px; }
+
+        .suspect-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .suspect {
+            border: 1px solid #330000;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .suspect span { color: #ff0000; font-weight: bold; }
+
+        /* Question & Reveal Styles */
+        .question-box {
+            background: #4a0000;
+            color: #fff;
+            padding: 25px;
+            text-align: center;
+            border-radius: 5px;
+            margin-top: 40px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: transparent;
+            color: #ff0000;
+            padding: 10px 30px;
+            border: 2px solid #ff0000;
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.4s;
+            margin-top: 30px;
+        }
+
+        .cta-button:hover {
+            background-color: #ff0000;
+            color: #000;
+            box-shadow: 0 0 20px #ff0000;
+        }
+
+        .feedback-btn {
+            background: transparent;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .suspect-box { grid-template-columns: 1fr; }
+            .case-header h1 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="cases.html">Cases</a>
+        <a href="yi.html">Your Ideas</a>
+    </nav>
+
+    <div class="container">
+        <div class="case-header">
+            <span class="status-tag">CASE FILE #002</span>
+            <h1>සලකුණු කළ හෝරාව</h1>
+            <p>ස්ථානය: කොළඹ 7 Penthouse | වේලාව: රාත්‍රී 9:00</p>
+        </div>
+
+        <div class="section">
+            <h3>සිදුවීම (The Incident)</h3>
+            <p>ප්‍රකට ව්‍යාපාරික <strong>"රංජිත් පෙරේරා"</strong> තම නිවසේදී මියගොස් සිටියදී හමුවිය. මරණයට හේතුව කෝපි කෝප්පයකට මිශ්‍ර කළ වස බව තහවුරු වී ඇත.</p>
+        </div>
+
+        <div class="section">
+            <h3>සාක්ෂි (Evidence)</h3>
+            <ul>
+                <li><strong>මරණ වේලාව:</strong> රාත්‍රී 8:55 - 9:05 අතර.</li>
+                <li><strong>CCTV:</strong> 8:50 ට නුවන් ඇතුළු වී 9:10 ට පිටවෙයි. වැස්ස නිසා පිටත CCTV අපැහැදිලිය.</li>
+                <li><strong>වැස්ස:</strong> රාත්‍රී 8:45 සිට 9:15 දක්වා තද වැස්සක් පැවතුනි.</li>
+                <li><strong>විශේෂ Clue:</strong> කැලැන්ඩරයේ 9:00 තැන රතු පෑනෙන් <strong>"S"</strong> ලෙස සලකුණු කර ඇත.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>සැකකරුවන් (Suspects)</h3>
+            <div class="suspect-box">
+                <div class="suspect">
+                    <span>1. නුවන් (ලේකම්):</span> වැටුප් ප්‍රශ්නයක් මත ආරවුලක් තිබුණි. මරණය සිදුවන වෙලාවේ කාමරයේ සිට ඇත.
+                </div>
+                <div class="suspect">
+                    <span>2. අනුරා (බිරිඳ):</span> රංජිත්ගේ පෞද්ගලික සම්බන්ධතා ගැන දැන සිටියද වැස්ස නිසා කිසිවක් නොඇසුණු බව පවසයි.
+                </div>
+                <div class="suspect">
+                    <span>3. ඩොක්ටර් සමන්:</span> රාත්‍රී 8:40 ට පිටව ගිය බව පවසයි.
+                </div>
+                <div class="suspect">
+                    <span>4. කීර්ති (ආරක්ෂක):</span> Guard room එකේ සිටි අතර CCTV වලින් අලුත් කිසිවෙකු නොපැමිණි බව පවසයි.
+                </div>
+            </div>
+        </div>
+
+        <div class="question-box">
+            <p>මිනීමරුවා කවුද? ඔහු මෙම අපරාධය සිදු කළේ කෙසේද?</p>
+        </div>
+
+        <center>
+            <button class="cta-button" onclick="revealSolution()" id="revealBtn">Reveal Investigation Analysis</button>
+        </center>
+
+        <div id="solutionSection" style="display: none; margin-top: 50px; animation: fadeIn 1.5s ease-in;">
+            <div class="section" style="border-color: #00ff00; background: rgba(0, 20, 0, 0.4);">
+                <h3 style="color: #00ff00;">විමර්ශන වාර්තාව (Analysis Result)</h3>
+                <p><strong>මිනීමරුවා:</strong> ඩොක්ටර් සමන් (Dr. Saman)</p>
+                <p><strong>විමර්ශන නිරීක්ෂණ:</strong></p>
+                <ul>
+                    <li><strong>"S" අකුරේ රහස:</strong> රංජිත් කැලැන්ඩරයේ 9:00 ට සලකුණු කර ඇති "S" අකුරෙන් අදහස් වන්නේ "Saman" යන්නයි. ඔහු රහසිගතව රාත්‍රී 9:00 ට පැමිණීමට නියමිතව තිබුණි.</li>
+                    <li><strong>අපරාධය සිදු කළ අයුරු:</strong> ඔහු 8:40 ට පිටව ගිය බව පැවසුවද, ඇත්තටම ඔහු වැස්ස පටන් ගන්නා විට ආරක්ෂක නිලධාරියා දොර වසාගෙන සිටි අවස්ථාවෙන් ප්‍රයෝජන ගෙන නැවත හොර රහසේ ඇතුළු වී ඇත.</li>
+                    <li><strong>කෝපි කෝප්පය:</strong> වෛද්‍යවරයෙකු ලෙස ඔහුට රංජිත්ගේ හෘදයාබාධයට දෙන බෙහෙත් සමඟ මිශ්‍ර වී මාරාන්තික වන වස වර්ගයක් ගැන දැනුම තිබුණි. ඔහු කෝපි එකට වස මිශ්‍ර කර නුවන් පැමිණීමට පෙර පිටව ගොස් ඇත.</li>
+                    <li><strong>ඇයි නුවන් නොවන්නේ?</strong> CCTV වල පැහැදිලිවම නුවන් ඇතුළු වී පිටවන වෙලාවන් සටහන්ව ඇත. මිනීමරුවෙකු එසේ සාක්ෂි ඉතිරි කරමින් වස ලබා දීමට ඉඩක් නැත.</li>
+                </ul>
+            </div>
+
+            <div style="margin-top: 30px; text-align: center; border: 1px solid #333; padding: 20px;">
+                <p style="color: #888;">ඔබ මෙය නිවැරදිව විසඳුවාද?</p>
+                <button class="feedback-btn" onclick="alert('විශිෂ්ටයි! ඔබ දක්ෂයෙක්.')" style="border: 1px solid #00ff00; color: #00ff00;">ඔව්</button>
+                <button class="feedback-btn" onclick="alert('කමක් නැහැ, තව උත්සාහ කරන්න.')" style="border: 1px solid #ff0000; color: #ff0000; margin-left: 10px;">නැහැ</button>
+            </div>
+        </div>
+
+        <center>
+            <p style="margin-top: 40px; color: #666;">ඔබේ අදහස් අපට එවන්න.</p>
+            <a href="cases.html" class="back-btn">← Back to Evidence Files</a>
+        </center>
+    </div>
+
+    <script>
+        function revealSolution() {
+            var solution = document.getElementById("solutionSection");
+            solution.style.display = "block";
+            solution.scrollIntoView({ behavior: 'smooth' });
+            document.getElementById("revealBtn").style.display = "none";
+        }
+    </script>
+</body>
+</html>
