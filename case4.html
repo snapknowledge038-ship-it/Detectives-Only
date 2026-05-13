@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case 04 - මාරාන්තික සජීවී විකාශය</title>
+    <style>
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        
+        body { 
+            font-family: 'Courier New', Courier, monospace; 
+            background: radial-gradient(circle, #0a0a0a 0%, #000000 100%); 
+            color: #d1d1d1; 
+            line-height: 1.6; 
+            margin: 0; 
+            padding: 0; 
+            scroll-behavior: smooth; 
+        }
+
+        /* Navigation */
+        nav { 
+            background: rgba(0, 0, 0, 0.9); 
+            padding: 20px; 
+            display: flex; 
+            justify-content: center; 
+            border-bottom: 2px solid #00ff00; 
+            position: fixed; 
+            top: 0; width: 100%; z-index: 1000; 
+        }
+
+        nav a { 
+            color: #00ff00; 
+            text-decoration: none; 
+            margin: 0 20px; 
+            font-weight: bold; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            transition: 0.3s;
+        }
+
+        nav a:hover { text-shadow: 0 0 10px #00ff00; }
+
+        /* Container */
+        .container { 
+            max-width: 900px; 
+            margin: 120px auto 50px; 
+            padding: 20px; 
+            animation: fadeIn 1s ease-out; 
+        }
+
+        .case-header { 
+            text-align: center; 
+            border-bottom: 3px double #00ff00; 
+            padding-bottom: 20px; 
+            margin-bottom: 30px; 
+        }
+
+        .case-header h1 { 
+            color: #00ff00; 
+            font-size: 2.2rem; 
+            margin: 5px 0; 
+            letter-spacing: 3px; 
+            text-shadow: 0 0 10px #00ff00; 
+        }
+
+        .status-tag { 
+            color: #00ff00; 
+            border: 1px solid #00ff00; 
+            padding: 2px 10px; 
+            font-size: 0.8rem; 
+            display: inline-block; 
+        }
+
+        /* Sections */
+        .section { 
+            background: rgba(0, 40, 0, 0.2); 
+            border-left: 4px solid #00ff00; 
+            padding: 20px; 
+            margin-bottom: 20px; 
+            border-radius: 0 10px 10px 0; 
+        }
+
+        .section h3 { 
+            color: #00ff00; 
+            text-transform: uppercase; 
+            border-bottom: 1px solid #004400; 
+            padding-bottom: 5px; 
+        }
+
+        .clue-box { 
+            background: rgba(0,0,0,0.6); 
+            padding: 15px; 
+            border: 1px dashed #004400; 
+            margin-top: 10px; 
+        }
+
+        .clue-box span { color: #00ff00; font-weight: bold; }
+
+        /* Suspects */
+        .suspect-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr 1fr; 
+            gap: 15px; 
+            margin-top: 15px; 
+        }
+
+        .suspect-card { 
+            background: #050505; 
+            border: 1px solid #111; 
+            padding: 15px; 
+            text-align: center; 
+            transition: 0.3s; 
+        }
+
+        .suspect-card:hover { border-color: #00ff00; transform: translateY(-5px); }
+
+        .question-box { 
+            background: #002200; 
+            color: #00ff00; 
+            padding: 25px; 
+            text-align: center; 
+            border: 1px solid #00ff00; 
+            margin: 40px 0; 
+        }
+
+        /* Buttons */
+        .reveal-btn { 
+            background: transparent; 
+            color: #00ff00; 
+            padding: 12px 40px; 
+            border: 2px solid #00ff00; 
+            text-transform: uppercase; 
+            font-weight: bold; 
+            cursor: pointer; 
+            transition: 0.4s; 
+            font-family: inherit;
+        }
+
+        .reveal-btn:hover { background: #00ff00; color: #000; }
+
+        .feedback-btn {
+            background: transparent;
+            padding: 12px 25px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: 0.3s;
+            margin: 5px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 30px;
+            color: #444;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) { .suspect-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="cases.html">Cases</a>
+        <a href="yi.html">Your Ideas</a>
+    </nav>
+
+    <div class="container">
+        <div class="case-header">
+            <span class="status-tag">TECH-CRIME FILE #004</span>
+            <h1>මාරාන්තික සජීවී විකාශය</h1>
+            <p>"Galle Express" Luxury Bus | 2:17 AM | කඩුගන්නාව</p>
+        </div>
+
+        <div class="section">
+            <h3>සිදුවීම (The Incident)</h3>
+            <p>ප්‍රකට YouTuber <strong>සුරේෂ් මෙන්ඩිස්</strong>, කඩුගන්නාව ප්‍රදේශයේදී බස් රථයේ විදුලිය ඇනහිටි මොහොතක VIP Lounge එක තුළ වෙඩි වැදී මියගොස් සිටියදී හමුවිය. ඒ වන විටත් ඔහු TikTok ඔස්සේ සජීවී විකාශයක යෙදී සිටියේය.</p>
+        </div>
+
+        <div class="section">
+            <h3>විමර්ශන දත්ත (Investigation Data)</h3>
+            <div class="clue-box">
+                <span>1. කාලය:</span> රෑ 2:15 ට විදුලිය ඇනහිටි අතර මරණය 2:16 - 2:18 අතර අඳුරේ සිදුවී ඇත.
+            </div>
+            <div class="clue-box">
+                <span>2. Locked Room:</span> දොර ඇතුළතින් Auto-Lock වී තිබුණි. ජනේල සියල්ල වසා තිබුණි. තුවක්කුව හමුවී නැත.
+            </div>
+            <div class="clue-box">
+                <span>3. ශ්‍රව්‍ය සාක්ෂි:</span> TikTok Live එකේ දොර ලොක් වන "Tic" හඬ දෙවරක් ඇසේ. සුරේෂ්ගේ අවසන් වදන: "U killed my..."
+            </div>
+            <div class="clue-box">
+                <span>4. සලකුණු:</span> බිම මඩ සහිත සපත්තු සලකුණු දෙකක් තිබුණි (ප්‍රමාණය 7 සහ 9).
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>සැකකරුවන් (The Suspects)</h3>
+            <div class="suspect-grid">
+                <div class="suspect-card">
+                    <h4 style="color:#00ff00;">තනුජා</h4>
+                    <p>Manager<br>ප්‍රමාණය: 7<br>පැවසුවේ රියදුරු සොයා ගිය බවයි.</p>
+                </div>
+                <div class="suspect-card">
+                    <h4 style="color:#00ff00;">රාජිව්</h4>
+                    <p>Tech Competitor<br>ප්‍රමාණය: 9<br>පැවසුවේ නිදා සිටි බවයි.</p>
+                </div>
+                <div class="suspect-card">
+                    <h4 style="color:#00ff00;">චමින්ද</h4>
+                    <p>Bus Driver<br>ප්‍රමාණය: 9<br>පැවසුවේ එන්ජිම පරීක්ෂා කළ බවයි.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-box">
+            <p>මිනීමරුවා කවුද? තුවක්කුව සැඟවූයේ කොහේද? "U killed my..." හි අර්ථය කුමක්ද?</p>
+        </div>
+
+        <center>
+            <button class="reveal-btn" onclick="revealSolution()" id="revealBtn">Execute Recovery Protocol (Reveal Solution)</button>
+        </center>
+
+        <div id="solutionSection" style="display: none; margin-top: 50px; animation: fadeIn 1.5s ease-in;">
+            <div class="section" style="border-color: #00ff00; background: rgba(0, 50, 0, 0.3);">
+                <h3 style="color: #00ff00;">පද්ධති විශ්ලේෂණය (Solution)</h3>
+                <p><strong>මිනීමරුවා:</strong> රාජිව් (TechKing LK)</p>
+                <ul>
+                    <li><strong>තාක්ෂණික ප්‍රහාරය:</strong> රාජිව් බස් රථයේ Smart Door පද්ධතිය Hack කර විදුලිය නැති මොහොතේ දොර විවෘත කරගෙන ඇත.</li>
+                    <li><strong>තුවක්කුව:</strong> ඔහු තුවක්කුව VIP Lounge එකේ තිබූ <strong>Mini Fridge</strong> එකේ පිටුපස සඟවා තිබුණි.</li>
+                    <li><strong>අවසන් වදන:</strong> "U killed my <strong>Channel</strong>!" (රාජිව්ගේ වංචා එළිදරව් කිරීමෙන් ඔහුගේ චැනලය නැති වන නිසා).</li>
+                </ul>
+            </div>
+
+            <div id="feedbackArea" style="margin-top: 30px; padding: 20px; border: 1px solid #333; text-align: center; background: rgba(0,0,0,0.5);">
+                <p style="color: #888;">ඔබ මෙම විමර්ශනය නිවැරදිව නිම කළාද?</p>
+                <div id="feedbackButtons">
+                    <button class="feedback-btn" onclick="showFeedback('yes')" style="border: 1px solid #00ff00; color: #00ff00;">ඔව්, මම නිවැරදියි! 🕵️</button>
+                    <button class="feedback-btn" onclick="showFeedback('no')" style="border: 1px solid #ff0000; color: #ff0000;">නැහැ, මට වැරදුණා.. 🤔</button>
+                </div>
+                <div id="resultMessage" style="display: none; margin-top: 20px; padding: 15px; border-radius: 5px; animation: fadeIn 0.8s;">
+                    <h4 id="resTitle" style="margin: 0;"></h4>
+                    <p id="resDesc" style="margin-top: 10px; color: #d1d1d1;"></p>
+                </div>
+            </div>
+        </div>
+
+        <center>
+            <a href="cases.html" class="back-btn">← Back to System Files</a>
+        </center>
+    </div>
+
+    <script>
+        function revealSolution() {
+            document.getElementById("solutionSection").style.display = "block";
+            document.getElementById("solutionSection").scrollIntoView({ behavior: 'smooth' });
+            document.getElementById("revealBtn").style.display = "none";
+        }
+
+        function showFeedback(type) {
+            document.getElementById("feedbackButtons").style.display = "none";
+            const msg = document.getElementById("resultMessage");
+            msg.style.display = "block";
+
+            if(type === 'yes') {
+                msg.style.border = "1px solid #00ff00";
+                document.getElementById("resTitle").innerText = "විශිෂ්ටයි, රහස් පරීක්ෂකතුමනි! 🎯";
+                document.getElementById("resTitle").style.color = "#00ff00";
+                document.getElementById("resDesc").innerText = "ඔබේ තර්කනය ඉතා ඉහළ මට්ටමක පවතිනවා. මීළඟ අභියෝගයට සූදානම් වන්න.";
+            } else {
+                msg.style.border = "1px solid #ff0000";
+                document.getElementById("resTitle").innerText = "උත්සාහය අත හරින්න එපා! 🔍";
+                document.getElementById("resTitle").style.color = "#ff0000";
+                document.getElementById("resDesc").innerText = "හොඳම රහස් පරීක්ෂකයන් පවා සමහර විට අසාර්ථක වෙනවා. නැවත සාක්ෂි පරීක්ෂා කර බලන්න.";
+            }
+        }
+    </script>
+</body>
+</html>
