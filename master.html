@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="__nEQL7HWiw1ky-17ipjUgGpnSADJpnbtMdCrMXTugw" />
 
-
-
-
-
     <meta name="description" content="Detectives Only is an interactive platform for those who love to solve complex crime scenes and mysteries.">
     <meta name="keywords" content="Detective Cases, Crime Solving, Sinhala Mystery, Detective Only, Crime Scene Investigation, Logical Puzzles, Mystery Stories">
 
@@ -18,10 +14,6 @@
     <meta property="og:url" content="https://snapknowledge038-ship-it.github.io/Detectives-Only/master.html">
     <meta property="og:type" content="website">
 
-
-    
-    
-    
     <title>Detectives Only | Mystery Portal</title>
     <style>
         body, html { 
@@ -45,8 +37,8 @@
 </head>
 <body>
 
-    <audio id="bg-music" loop>
-        <source src="bg-music.mp3" type="audio/mpeg">
+    <audio id="bg-music">
+        <source id="music-source" src="sindu1.mp3" type="audio/mpeg">
     </audio>
 
     <button id="music-control" onclick="toggleMusic()">🕵️ Activate Audio</button>
@@ -55,16 +47,43 @@
 
     <script>
         var music = document.getElementById("bg-music");
+        var source = document.getElementById("music-source");
         var btn = document.getElementById("music-control");
+
+        // සින්දු ලැයිස්තුව
+        var playlist = ["sindu1.mp3", "sindu2.mp3", "sindu3.mp3"];
+        var currentTrack = 0;
 
         function toggleMusic() {
             if (music.paused) {
                 music.play();
+                updateButtonStyle(true);
+            } else {
+                music.pause();
+                updateButtonStyle(false);
+            }
+        }
+
+        // සින්දුවක් අවසන් වූ පසු ඊළඟ එක වාදනය කිරීමේ logic එක
+        music.onended = function() {
+            currentTrack++; // ඊළඟ එකට යන්න
+            
+            // ලැයිස්තුව අවසන් නම් නැවත මුලට (Loop effect)
+            if (currentTrack >= playlist.length) {
+                currentTrack = 0;
+            }
+            
+            source.src = playlist[currentTrack]; // නව සින්දුවේ නම ඇතුළත් කිරීම
+            music.load(); // සින්දුව load කිරීම
+            music.play(); // වාදනය ආරම්භ කිරීම
+        };
+
+        function updateButtonStyle(isPlaying) {
+            if (isPlaying) {
                 btn.innerHTML = "⏸ Pause Briefing";
                 btn.style.borderColor = "#00ff00";
                 btn.style.color = "#00ff00";
             } else {
-                music.pause();
                 btn.innerHTML = "🕵️ Resume Briefing";
                 btn.style.borderColor = "#ff0000";
                 btn.style.color = "#ff0000";
